@@ -1,11 +1,22 @@
 <template>
 	<section id="portfolio" class="dv-portfolio">
-		<h2>My Projects</h2>
+		<h2>Portfolio</h2>
+		<p>
+			Down below you'll be able to find all of the projects I created (or contributed to).
+			Obviously this portfolio is not in it, but if you're curious: it's made with VueJS/NuxtJS 
+			and NodeJS.
+		</p>
+
+		<arrow-down color="#E27D60" scrollTo="#portfolio">Contact</arrow-down>
 	</section>
 </template>
 
 <script>
+	import ArrowDown from '@/components/UI/ArrowDown.vue';
 	export default {
+		components: {
+			ArrowDown
+		},
 		data() {
 			return {
 				
