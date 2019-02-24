@@ -80,7 +80,7 @@
 					let top = -(scrollTop * .4) * randomNumber;
 					item.style.top = top + 'px';
 				})
-			}, 50))
+			}, 30))
 		}
 	}
 </script>

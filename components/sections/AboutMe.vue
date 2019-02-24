@@ -18,17 +18,19 @@
 				<img src="~assets/images/Person-placeholder.jpg" alt="">
 			</div>
 		</div>
-
+		<arrow-down color="#FFF" scrollTo="#portfolio">Portfolio</arrow-down>
 	</section>
 </template>
 
 <script>
 	import _ from 'lodash';
 	import SkillSlider from '@/components/modules/SkillSlider.vue';
+	import ArrowDown from '@/components/UI/ArrowDown.vue';
 
 	export default {
 		components: {
-			SkillSlider
+			SkillSlider,
+			ArrowDown
 		},
 		data() {
 			return {
