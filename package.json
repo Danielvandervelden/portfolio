@@ -1,0 +1,28 @@
+{
+  "name": "portfolio-dev",
+  "version": "1.0.0",
+  "description": "It&#39;s great, really.",
+  "author": "Daniel van der Velden",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
+    "build": "nuxt build",
+    "start": "cross-env NODE_ENV=production node server/index.js",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/pwa": "^2.6.0",
+    "cross-env": "^5.2.0",
+    "express": "^4.16.4",
+    "lodash": "^4.17.11",
+    "node-sass": "^4.11.0",
+    "nuxt": "^2.3.4",
+    "sass-loader": "^7.1.0",
+    "vue-flickity": "^1.1.2",
+    "vue-scrollto": "^2.13.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
