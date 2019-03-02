@@ -2,58 +2,16 @@
 	<section class="dv-parallax-name">
 		<div class="dv-parallax-name__container">
 			<h1>
-				<span class="parallax-letter">D</span>
-				<span class="parallax-letter">A</span>
-				<span class="parallax-letter">N</span>
-				<span class="parallax-letter">I</span>
-				<span class="parallax-letter">E</span>
-				<span class="parallax-letter">L</span>
-
+				<span :class="letter !== ' ' ? 'parallax-letter' : ''" v-for="(letter, index) in generateLetterArray(myself.firstName)" :key="letter + index">{{letter.toUpperCase()}}</span>
 				<span class="dv-parallax-name__last-name">
-					<span class="parallax-letter">V</span>
-					<span class="parallax-letter">A</span>
-					<span class="parallax-letter">N</span>
-					<span>&nbsp;</span>
-					<span class="parallax-letter">D</span>
-					<span class="parallax-letter">E</span>
-					<span class="parallax-letter">R</span>
-					<span>&nbsp;</span>
-					<span class="parallax-letter">V</span>
-					<span class="parallax-letter">E</span>
-					<span class="parallax-letter">L</span>
-					<span class="parallax-letter">D</span>
-					<span class="parallax-letter">E</span>
-					<span class="parallax-letter">N</span>
+					<span :class="letter !== ' ' ? 'parallax-letter' : ''" v-for="(letter, index) in generateLetterArray(myself.lastName)" :key="letter + index">{{letter.toUpperCase()}}</span>
 				</span>
 			</h1>
 		</div>
 
 		<div class="dv-parallax-name__ocupation">
 			<h2>
-				<span class="parallax-letter">F</span>
-				<span class="parallax-letter">U</span>
-				<span class="parallax-letter">L</span>
-				<span class="parallax-letter">L</span>
-				<span>&nbsp;</span>
-				<span class="parallax-letter">S</span>
-				<span class="parallax-letter">T</span>
-				<span class="parallax-letter">A</span>
-				<span class="parallax-letter">C</span>
-				<span class="parallax-letter">K</span>
-				<span>&nbsp;</span>
-
-				<span class="parallax-letter black">W</span>
-				<span class="parallax-letter black">E</span>
-				<span class="parallax-letter black">B</span>
-				<span class="parallax-letter black">D</span>
-				<span class="parallax-letter black">E</span>
-				<span class="parallax-letter black">V</span>
-				<span class="parallax-letter black">E</span>
-				<span class="parallax-letter black">L</span>
-				<span class="parallax-letter black">O</span>
-				<span class="parallax-letter black">P</span>
-				<span class="parallax-letter black">E</span>
-				<span class="parallax-letter black">R</span>
+				<span :class="[letter !== ' ' ? 'parallax-letter' : '', index >= 11 ? 'black' : '']" v-for="(letter, index) in generateLetterArray(myself.occupation)" :key="letter + index">{{letter.toUpperCase()}}</span>
 			</h2>
 		</div>
 	</section>
@@ -65,22 +23,36 @@
 	export default {
 		data() {
 			return {
-				
+				myself: {
+					firstName: "Daniel",
+					lastName: "van der Velden",
+					occupation: "full stack webdeveloper"
+				}
 			}
 		},
 		mounted() {
-			let letters = document.querySelectorAll('.parallax-letter');
-			let randomNumbers = Array.from({length: letters.length}, () => Math.random());
+			let randomNumbers = Array.from({length: [...document.querySelectorAll('.parallax-letter')].length}, () => Math.random());
 			let scrollTop = document.documentElement.scrollTop;
 			
 			document.addEventListener('scroll', _.throttle(() => {
 				scrollTop = document.documentElement.scrollTop;
-				[].forEach.call(letters, (item, index) => {
+				[...document.querySelectorAll('.parallax-letter')].forEach((item, index) => {
 					let randomNumber = randomNumbers[index];
-					let top = -(scrollTop * .4) * randomNumber;
+					let top = (scrollTop * .3) * randomNumber;
 					item.style.top = top + 'px';
 				})
 			}, 30))
+		},
+		methods: {
+			generateLetterArray(string) {
+				let htmlArray = [];
+				
+				_.each([...string.split('')], (letter) => {
+					htmlArray.push(letter);
+				})
+
+				return htmlArray;
+			}
 		}
 	}
 </script>
@@ -108,9 +80,10 @@
 			margin: 0;
 			color: $red;
 
-			> span {
+			> span:not(.dv-parallax-name__last-name) {
 				font-size: 10rem;
 				font-weight: bold;
+				letter-spacing: 1rem;
 			}
 		}
 
@@ -119,11 +92,12 @@
 			position: relative;
 			top: -3rem;
 			line-height: 3rem;
-			font-size: 3.6rem !important;
 			color: $black;
+			font-size: 3.6rem !important;
 
 			> span {
 				font-weight: 300;
+				letter-spacing: .9rem;
 			}
 		}
 
@@ -131,6 +105,10 @@
 			text-align: center;
 			position: relative;
 			top: 20%;
+
+			span {
+				letter-spacing: 1rem;
+			}
 		}
 	}
 </style>

@@ -8,6 +8,7 @@
   <main>
 	  <about-me></about-me>
 	  <portfolio></portfolio>
+	  <contact></contact>
   </main>
 </div>
 </template>
@@ -17,13 +18,15 @@
 	import ArrowDown from '@/components/UI/ArrowDown.vue';
 	import AboutMe from '@/components/sections/AboutMe.vue';
 	import Portfolio from '@/components/sections/Portfolio.vue';
+	import Contact from '@/components/sections/Contact.vue';
 
 	export default {
 		components: {
 			ParallaxName,
 			ArrowDown,
 			AboutMe,
-			Portfolio
+			Portfolio,
+			Contact
 		}
 	}
 </script>
