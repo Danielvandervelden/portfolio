@@ -1,5 +1,5 @@
 <template>
-	<section class="dv-contact">
+	<section id="contact" class="dv-contact">
 		<h2>Contact</h2>
 	</section>
 </template>

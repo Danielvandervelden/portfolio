@@ -1,15 +1,16 @@
 /*
-/* State module for navigation
+/* State module for admin
 /*_______________________________________________________*/
 
 
 export const state = () => ({
-	navItems: ['Home', 'About', 'Portfolio', 'Contact']
+	loggedIn: false,
+	token: null,
 })
 
 export const getters = {
-	getNavItems: state => {
-		return state.navItems;
+	loggedIn: state => {
+		return state.loggedIn;
 	}
 }
 

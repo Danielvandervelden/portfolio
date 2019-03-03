@@ -9,7 +9,7 @@
 
 		<portfolio-post-slider></portfolio-post-slider>
 
-		<arrow-down color="#E27D60" scrollTo="#portfolio">Contact</arrow-down>
+		<arrow-down color="#E27D60" scrollTo="#contact">Contact</arrow-down>
 	</section>
 </template>
 
