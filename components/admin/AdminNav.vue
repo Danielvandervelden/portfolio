@@ -31,6 +31,7 @@
 		background-color: $light_grey;
 		@include container();
 		padding: 10px 0;
+		margin-bottom: 20px;
 
 		&-list {
 			display: flex;
