@@ -39,7 +39,8 @@ module.exports = {
   */
   plugins: [
 	{ src: '~/plugins/vue-flickity', ssr: false },
-	{ src: '~/plugins/scrollto'}
+	{ src: '~/plugins/scrollto'},
+	{ src: '~/plugins/global_components' },
   ],
 
   /*
@@ -54,7 +55,8 @@ module.exports = {
   ** Axios module configuration
   */
   axios: {
-    baseURL: "https://portfolio-57413.firebaseio.com/"
+	baseURL: "https://portfolio-57413.firebaseio.com/",
+	withCredentials: false
   },
 
   /*
