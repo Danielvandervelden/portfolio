@@ -43,7 +43,8 @@
 					pageDots: false,
 					wrapAround: false,
 					autoPlay: true,
-					autoPlay: 1500
+					autoPlay: 1500,
+					imagesLoaded: true
 				}
 			}
 		}
