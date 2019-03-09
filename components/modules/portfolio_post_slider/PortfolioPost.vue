@@ -1,10 +1,10 @@
 <template>
-	<div class="dv-admin__portfolio-item">
-		<div class="dv-admin__portfolio-item--image" :style="{'background-image': 'url(' + background + ')'}"></div>
-		<div class="dv-admin__portfolio-item--content" :data-id="id">
-			<h4 class="dv-admin__portfolio-item--title">{{name}}</h4>
+	<div class="dv-portfolio__item">
+		<div class="dv-portfolio__item--image" :style="{'background-image': 'url(' + background + ')'}"></div>
+		<div class="dv-portfolio__item--content" :data-id="id">
+			<h4 class="dv-portfolio__item--title">{{name}}</h4>
 			<p>{{content}}</p>
-			<dv-button class="red" :link="website">Visit {{name}}</dv-button>
+			<dv-button class="red" :extLink="website">Visit {{name}}</dv-button>
 			<dv-button class="red">Read more</dv-button>
 		</div>
 	</div>
@@ -27,10 +27,14 @@
 	}
 </script>
 <style scoped lang='scss'>
-	.dv-admin__portfolio-item {
+	.dv-portfolio__item {
 		width: 100%;
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		padding: 0 100px;
+		box-sizing: border-box;
+
 	}
 </style>

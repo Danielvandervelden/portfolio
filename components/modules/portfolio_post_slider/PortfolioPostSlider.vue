@@ -21,14 +21,14 @@
 		data() {
 			return {
 				flickityOptions: {
-					initialIndex: 1,
+					initialIndex: 0,
 					pageDots: false,
 				},
 				portfolioItems: []
 			}
 		},
 		mounted() {
-			this.portfolioItems = this.$store.getters['getPortfolioItems'];
+			this.portfolioItems = this.$store.getters['frontend/portfolio/getPortfolioItems'];
 		}		
 	}
 </script>
