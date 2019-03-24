@@ -43,9 +43,17 @@ export const getters = {
 }
 
 export const mutations = {
-	
+	formSubmitted() {
+		document.querySelector('body').classList.remove('loading');
+	}
 }
 
 export const actions = {
-	
+	submitForm(context, formInput) {
+		document.querySelector('body').classList.add('loading');
+		this.$axios.$post('contactform.json', formInput)
+			.then( res => {
+				context.commit('formSubmitted');
+			}) 
+	}
 }

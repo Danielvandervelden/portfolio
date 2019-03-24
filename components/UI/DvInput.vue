@@ -1,8 +1,8 @@
 <template>
 	<div class="form-control">
 		<label v-if="label" :for="name">{{label}}</label>
-		<input v-if="type == 'text'" :name="name" class="dv-input" @input="inputHandler($event)" :type="type" :placeholder="placeholder">
-		<textarea class="dv-textarea" v-else-if="type = 'textarea'" @input="inputHandler($event)" :placeholder="placeholder" />
+		<input :style="{ 'border' : `1px solid ${border_color }`}" v-if="[type == 'text', type == 'email', type == 'password']" :name="name" class="dv-input" @input="inputHandler($event)" :type="type" :placeholder="placeholder">
+		<textarea :style="{ 'border' : `1px solid ${border_color }`}" class="dv-textarea" v-else-if="type = 'textarea'" @input="inputHandler($event)" :placeholder="placeholder" />
 	</div>
 </template>
 
@@ -13,7 +13,8 @@
 			'placeholder',
 			'value',
 			'label',
-			'name'
+			'name',
+			'border_color'
 		],
 		data() {
 			return {
@@ -30,17 +31,17 @@
 	@import '~assets/styles/_base.scss';
 
 	.form-control {
-		margin: 15px 0;
+		margin: 1.5rem 0;
 	}
 
 	label {
 		display: block;
+		margin-bottom: 1rem
 	}
 
 	.dv-input {
 		padding: 1rem 1.5rem;
-		border: 1px solid $grey;
-		border-radius: 5px;
+		border-radius: .5rem;
 		background-color: transparent;
 		width: 100%;
 		box-sizing: border-box;
