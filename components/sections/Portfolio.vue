@@ -22,11 +22,6 @@
 			ArrowDown,
 			PortfolioPostSlider
 		},
-		data() {
-			return {
-				
-			}
-		}
 	}
 </script>
 <style scoped lang='scss'>

@@ -1,5 +1,7 @@
 <template>
-
+	<div>
+		{{getPortfolioItems}}
+	</div>
 </template>
 
 <script>
@@ -8,9 +10,11 @@
 		components: {
 			PortfolioPost
 		},
-		mounted() {
-			this.portfolioItems = this.$store.getters['frontend/portfolio/getPortfolioItems'];
-		}		
+		computed: {
+			getPortfolioItems() {
+				return this.$store.getters['frontend/portfolio/getPortfolioItems'];
+			}
+		}
 	}
 </script>
 <style scoped lang='scss'>

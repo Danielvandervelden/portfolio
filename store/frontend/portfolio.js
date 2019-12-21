@@ -5,34 +5,51 @@
 
 export const state = () => ({
 	portfolioItems: [
-		[1, {
+		{
+			name: 'NMS Database',
+			id: new Date() * Math.random() + Math.random(),
+			website: 'https://nmsdatabase.com',
+			content: `This is by far the biggest project I have ever done. It started out of love for the game
+			"No Man's Sky". It ended up just being a project that I can add to my portfolio since I wouldn't have time
+			to keep everything updated. It utilizes a Firebase backend which stores all of the data.
+			
+			On the frontend there is the possibility to search for a weapon, planet or ship and actually posting a find is also
+			possible if the user registers. Once again, the registration is done through Firebase using an email confirmation system.`,
+			background: `@/assets/images/portfolioimages/nmsdatabase.png`
+		},
+		{
+			name: 'Car Insurance Application',
+			id: new Date() * Math.random() + Math.random(),
+			website: '#',
+			content: `This was a very big Car Insurance Application that I had to build for a client. All the current
+			client data has been stripped as well as the possibility to check for license plates. All the other components, 
+			however, are still operational and you can go through the steps as you please. It is not hooked up to a backend
+			so you don't have to worry about accidentally requesting an insurance.
+			
+			This application is built in purely Vue.JS and utilizes many different packages such as Vuei18n, Axios and VeeValidate. Its purpose
+			was to serve as a sort of template which could be built upon for different types of insurances even though the initial
+			idea was just car insurance.`,
+			background: `@/assets/images/portfolioimages/car-insurance-app.png`
+		},
+		{
 			name: 'Saarbakt',
 			id: new Date() * Math.random() + Math.random(),
 			website: 'https://www.saarbakt.nl',
-			content: `This is the very first website I ever created. It utilizes Wordpress for a backend
-			so that it's easy to manage for the user. Languages/techniques used are: PHP, SASS, Javascript, HTML5`,
-			background: `@/assets/images/portfolioimages/Saarbaktlogoheader.png`
-		}],
-		[2, {
-			name: 'PrimalConquer',
+			content: `The very first website I made. This one was for my sister. She wanted a blog to post
+			all sorts of different recipes on. It is built using Wordpress and everything is compiled/transpiled using
+			Webpack. It has been while since it was built and I have learned a ridiculous amount since then. Most likely
+			I would setup the entire project much better.`,
+			backgrond: `@/assets/images/portfolioimages/saarbakt.png`
+		},
+		{
+			name: 'EKI Magento 2 Webshop',
 			id: new Date() * Math.random() + Math.random(),
-			website: 'https://primalconquer.com',
-			content: `The second website I ever made. Also utilizes Wordpress as a backend for easy use. This 
-			is a website for a gaming private server of a popular game called "Conquer Online". Next to Wordpress
-			as a backend, there's the possibility to register an account for the server which gets saved in a 
-			separate MYSQL database. Based on those login details you can not only login to the actual game,
-			but also in the website to view your character and stats. This separate login system is based on
-			PHP sessions.`
-		}],
-		[3, {
-			name: 'Kwintessens',
-			id: new Date() * Math.random() + Math.random(),
-			website: 'https://www.kwintessens.nl',
-			content: `This is a Magento 2 webshop. I did the frontend for this website. Magento 2 is an
-			eCommerce platform for, obviously, webshops. Its backend is based on PHP, the Javascript utilizes
-			KnockoutJS and RequireJS and LESS is what it ships with by default. For this I used Javascript's
-			ES6 features and I compiled it with Babel in order for older browsers to understand it.`
-		}]
+			website: 'https://www.eki.nl',
+			content: `One of the Magento 2 webshops I am particularly proud of. Built with, obviously, Magento 2. It uses
+			the core Front End technologies that are shipped with it such as Less, RequireJS and Grunt. This design was a very nice
+			one to develop and implement.`,
+			backgrond: `@/assets/images/portfolioimages/saarbakt.png`
+		},
 	]
 })
 
