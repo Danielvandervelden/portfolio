@@ -9,16 +9,15 @@
 						creating web applications in VueJS/NuxtJS, Magento 2 Webshops and Wordpress. I do both Front End development
 						and Backend development and I do all of this with Javascript. 
 					</p>
-
-					<skill-slider></skill-slider>
+					<img src="~assets/images/Person-placeholder.jpg" alt="Daniel van der Velden">
 				</div>
 			</div>
 
 			<div class="dv-about-me__right">
-				<img src="~assets/images/Person-placeholder.jpg" alt="">
+				<skill-slider></skill-slider>
 			</div>
 		</div>
-		<arrow-down color="#FFF" scrollTo="#portfolio">Portfolio</arrow-down>
+		<arrow-down color="#333">Portfolio</arrow-down>
 	</section>
 </template>
 
@@ -55,12 +54,12 @@
 	@import '~assets/styles/_base.scss';
 
 	.dv-about-me {
-		height: 100vh;
+		min-height: 100vh;
 		@include full-width-background($grey);
 
 		h2 {
 			margin: 0;
-			color: $white;
+			color: #333;
 			padding-top: 20px;
 			font-size: 5rem;
 		}
@@ -72,11 +71,12 @@
 
 		&__left {
 			transform: translateX(-1000px);
-			flex: 0 1 50%;
+			flex: 0 1 48%;
+			margin-right: 2%;
 			transition: all .5s ease-in-out;
-
-			&--content {
-				color: #FFF;
+			
+			img {
+				max-width: 300px;
 			}
 		}
 
@@ -87,10 +87,6 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-
-			img {
-				max-width: 300px;
-			}
 		}
 
 		.from-left {

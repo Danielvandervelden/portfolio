@@ -1,6 +1,6 @@
 <template>
 	<div :style="{color: color}" class="dv-ui__arrow-down">
-		<a href="#" v-scroll-to="scrollTo">
+		<a href="#">
 		<div class="dv-ui__arrow-down--wrapper">
 			<span class="dv-ui__arrow-down--title"><slot /></span>
 			<div class="dv-ui__arrow-down--arrow">
@@ -13,12 +13,7 @@
 
 <script>
 	export default {
-		props: ['scrollTo', 'color'],
-		data() {
-			return {
-				
-			}
-		},
+		props: ['color'],
 	}
 </script>
 <style scoped lang='scss'>

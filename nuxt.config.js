@@ -38,8 +38,6 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-	{ src: '~/plugins/vue-flickity', ssr: false },
-	{ src: '~/plugins/scrollto'},
 	{ src: '~/plugins/global_components' },
   ],
 

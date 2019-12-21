@@ -9,7 +9,7 @@
 
 		<portfolio-post-slider></portfolio-post-slider>
 
-		<arrow-down color="#E27D60" scrollTo="#contact">Contact</arrow-down>
+		<arrow-down color="#E27D60">Contact</arrow-down>
 	</section>
 </template>
 
@@ -33,7 +33,7 @@
 	@import '~assets/styles/_base.scss';
 
 	.dv-portfolio {
-		height: 100vh;
+		min-height: 100vh;
 		@include full-width-background($light_grey);
 
 		h2 {

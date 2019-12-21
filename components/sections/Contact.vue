@@ -37,7 +37,7 @@
 	@import '~assets/styles/_base.scss';
 
 	.dv-contact {
-		height: 100vh;
+		min-height: 100vh;
 		@include full-width-background($grey);
 	}
 

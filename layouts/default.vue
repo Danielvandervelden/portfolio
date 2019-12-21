@@ -23,13 +23,5 @@
 
 	.dv-content-wrapper {
 		@include container();
-
-		nav {
-
-		}
-
-		.dv-main {
-			
-		}
 	}
 </style>

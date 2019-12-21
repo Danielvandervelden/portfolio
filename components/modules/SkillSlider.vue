@@ -1,51 +1,37 @@
 <template>
 	<div>
-		<h4 class="white"><span class="red">Technologies</span> I have worked with:</h4>
+		<h4><span class="red">Technologies</span> I have worked with:</h4>
 
-		<no-ssr>
-			<flickity class="skill-slider" ref="flickity" :options="flickityOptions">
-				<div class="technology">
-					<img src="~assets/images/skillslider/vue_logo.svg" alt="">
-				</div>
-				<div class="technology">
-					<img src="~assets/images/skillslider/nuxt_logo.svg" alt="">
-				</div>
-				<div class="technology">
-					<img src="~assets/images/skillslider/node_logo.svg" alt="">
-				</div>
-				<div class="technology">
-					<img src="~assets/images/skillslider/javascript_logo.svg" alt="">
-				</div>
-				<div class="technology">
-					<img src="~assets/images/skillslider/sass_logo.svg" alt="">
-				</div>
-				<div class="technology">
-					<img src="~assets/images/skillslider/php_logo.svg" alt="">
-				</div>
-				<div class="technology">
-					<img src="~assets/images/skillslider/react_logo.svg" alt="">
-				</div>
-				<div class="technology">
-					<img src="~assets/images/skillslider/html_css_logo.svg" alt="">
-				</div>
-			</flickity>
-		</no-ssr>
+		<div class="technologies-wrapper">
+			<article v-for="(image, index) in images" :key="index">
+				<img :src="image.image" :alt="image.name">
+			</article>
+		</div>
 	</div>
 </template>
 
-<script>
+<script>	
 	export default {
 		data() {
 			return {
-				flickityOptions: {
-					initialIndex: 1,
-					prevNextButtons: false,
-					pageDots: false,
-					wrapAround: false,
-					autoPlay: true,
-					autoPlay: 1500,
-					imagesLoaded: true
-				}
+				images: [
+					{name: 'HTML and CSS', image: require('@/assets/images/skillslider/html_css_logo.svg') },
+					{name: 'Vue.js', image:require('@/assets/images/skillslider/vue_logo.svg')},
+					{name: 'Nuxt.js', image:require('@/assets/images/skillslider/nuxt_logo.svg')},
+					{name: 'Node.js', image:require('@/assets/images/skillslider/node_logo.svg')},
+					{name: 'Javascript', image:require('@/assets/images/skillslider/javascript_logo.svg')},
+					{name: 'SASS', image:require('@/assets/images/skillslider/sass_logo.svg')},
+					{name: 'LESS', image:require('@/assets/images/skillslider/LESS_logo.svg')},
+					{name: 'Webpack', image:require('@/assets/images/skillslider/webpack.svg')},
+					{name: 'PHP', image:require('@/assets/images/skillslider/php_logo.svg')},
+					{name: 'React', image:require('@/assets/images/skillslider/react_logo.svg')},
+					{name: 'Git', image:require('@/assets/images/skillslider/git_logo.svg')},
+					{name: 'Magento 2', image:require('@/assets/images/skillslider/magento2.svg')},
+					{name: 'RequireJS', image:require('@/assets/images/skillslider/require-js_logo.svg')},
+					{name: 'Wordpress', image:require('@/assets/images/skillslider/wordpress-logo.svg')},
+					{name: 'Photoshop', image:require('@/assets/images/skillslider/photoshop_logo.svg')},
+					{name: 'Sketch', image:require('@/assets/images/skillslider/sketch_logo.svg')},
+				]
 			}
 		}
 	}
@@ -55,16 +41,23 @@
 		margin-bottom: 50px;
 		font-weight: normal;
 		text-align: center;
+		color: #333
 	}
 
-	.technology {
-		width: 100%;
+	.technologies-wrapper {
 		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
+		flex-wrap: wrap;
+		justify-content: space-around;
 
-	img {
-		width: 150px;
+		article {
+			margin-right: 1.5rem;
+			margin-bottom: 1.5rem;
+
+			img {
+				max-height: 100%;
+				height: 65px;
+				width: auto;
+			}
+		}
 	}
 </style>
