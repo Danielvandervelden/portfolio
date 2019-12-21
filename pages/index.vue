@@ -2,7 +2,7 @@
 <div class="dv-home-page">
   <header>
     <parallax-name></parallax-name>
-	<arrow-down color="#E27D60" scrollTo="#aboutme">About me</arrow-down>
+	<arrow-down element="aboutme" color="#E27D60" scrollTo="#aboutme">About me</arrow-down>
   </header>
 
   <main>

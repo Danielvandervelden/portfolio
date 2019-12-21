@@ -1,6 +1,6 @@
 <template>
 	<div :style="{color: color}" class="dv-ui__arrow-down">
-		<a href="#">
+		<a @click="scrollTo" :title="'scroll to ' + element" href="#">
 		<div class="dv-ui__arrow-down--wrapper">
 			<span class="dv-ui__arrow-down--title"><slot /></span>
 			<div class="dv-ui__arrow-down--arrow">
@@ -13,7 +13,15 @@
 
 <script>
 	export default {
-		props: ['color'],
+		props: ['color', 'element'],
+		methods: {
+			scrollTo(e) {
+				e.preventDefault();
+				document.getElementById(this.element).scrollIntoView({
+					behavior: "smooth"
+				})
+			}
+		}
 	}
 </script>
 <style scoped lang='scss'>

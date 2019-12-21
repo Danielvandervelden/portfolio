@@ -7,20 +7,24 @@
 			and NodeJS.
 		</p>
 
-		<portfolio-post-slider></portfolio-post-slider>
+		<p>There are many more projects I have worked on, however to put all those websites here would be too much. Instead
+			I present you with the projects I liked best.
+		</p>
 
-		<arrow-down color="#E27D60">Contact</arrow-down>
+		<portfolio-post-grid></portfolio-post-grid>
+
+		<arrow-down element="contact" color="#E27D60">Contact</arrow-down>
 	</section>
 </template>
 
 <script>
 	import ArrowDown from '@/components/UI/ArrowDown.vue';
-	import PortfolioPostSlider from '@/components/modules/portfolio_post_slider/PortfolioPostSlider.vue';
+	import PortfolioPostGrid from '@/components/modules/portfolio_post_slider/PortfolioPostGrid.vue';
 
 	export default {
 		components: {
 			ArrowDown,
-			PortfolioPostSlider
+			PortfolioPostGrid
 		},
 	}
 </script>
@@ -29,6 +33,7 @@
 
 	.dv-portfolio {
 		min-height: 100vh;
+		padding-bottom: 8rem;
 		@include full-width-background($light_grey);
 
 		h2 {
