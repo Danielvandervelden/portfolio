@@ -1,7 +1,7 @@
 {
   "name": "portfolio-dev",
   "version": "1.0.0",
-  "description": "It&#39;s great, really.",
+  "description": "The portfolio website of Daniel van der Velden made in Vue.js/Nuxt.js",
   "author": "Daniel van der Velden",
   "private": true,
   "scripts": {
