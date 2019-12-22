@@ -23,6 +23,7 @@
     "smoothscroll-polyfill": "^0.4.4"
   },
   "devDependencies": {
+    "@nuxtjs/google-analytics": "^2.2.2",
     "nodemon": "^2.0.2"
   }
 }

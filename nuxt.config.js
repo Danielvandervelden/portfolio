@@ -8,7 +8,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'Daniel van der Velden',
+	title: 'Daniel van der Velden',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -18,7 +18,7 @@ module.exports = {
 	  { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
 	  { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Hind+Siliguri:300,700" },
 	  { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Work+Sans:300,900" },
-	  { rel: "stylesheet", href: "https://use.fontawesome.com/releases/v5.7.1/css/all.css" }
+	  { rel: "stylesheet", href: "https://use.fontawesome.com/releases/v5.7.1/css/all.css" },
     ]
   },
 
@@ -50,6 +50,12 @@ module.exports = {
     '@nuxtjs/axios',
 	'@nuxtjs/pwa',
 	'nuxt-lazy-load'
+  ],
+
+  buildModules: [
+	["@nuxtjs/google-analytics", {
+		id: "UA-116287331-2"
+	}]
   ],
   /*
   ** Axios module configuration
