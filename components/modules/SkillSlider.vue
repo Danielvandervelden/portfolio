@@ -55,8 +55,8 @@
 			min-width: 7rem;
 
 			img {
-				max-height: 100%;
-				max-width: 100%;
+				max-height: 65px;
+    			max-width: 140px;
 				height: 65px;
 				width: auto;
 			}
