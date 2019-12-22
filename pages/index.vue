@@ -20,6 +20,9 @@
 	import Portfolio from '@/components/sections/Portfolio.vue';
 	import Contact from '@/components/sections/Contact.vue';
 
+	/* Smooth scrolling polyfill */
+	import smoothScroll from 'smoothscroll-polyfill';
+
 	export default {
 		components: {
 			ParallaxName,
@@ -27,6 +30,9 @@
 			AboutMe,
 			Portfolio,
 			Contact
+		},
+		mounted() {
+			smoothScroll.polyfill();
 		}
 	}
 </script>
