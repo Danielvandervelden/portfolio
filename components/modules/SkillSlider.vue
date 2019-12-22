@@ -21,7 +21,7 @@
 					{name: 'Node.js', image:require('@/assets/images/skillslider/node_logo.svg')},
 					{name: 'Javascript', image:require('@/assets/images/skillslider/javascript_logo.svg')},
 					{name: 'SASS', image:require('@/assets/images/skillslider/sass_logo.svg')},
-					{name: 'LESS', image:require('@/assets/images/skillslider/LESS_logo.svg')},
+					{name: 'LESS', image:require('@/assets/images/skillslider/less_logo.svg')},
 					{name: 'Webpack', image:require('@/assets/images/skillslider/webpack.svg')},
 					{name: 'PHP', image:require('@/assets/images/skillslider/php_logo.svg')},
 					{name: 'React', image:require('@/assets/images/skillslider/react_logo.svg')},
