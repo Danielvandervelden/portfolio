@@ -2,11 +2,14 @@
 	<section class="dv-parallax-name">
 		<div class="dv-parallax-name__container from-top">
 			<h1>
+				<span>Daniel van der Velden</span>
+			</h1>
+			<div class="style-h1">
 				<span :class="letter !== ' ' ? 'parallax-letter' : ''" v-for="(letter, index) in generateLetterArray(myself.firstName)" :key="letter + index">{{letter.toUpperCase()}}</span>
 				<span class="dv-parallax-name__last-name">
 					<span :class="letter !== ' ' ? 'parallax-letter' : ''" v-for="(letter, index) in generateLetterArray(myself.lastName)" :key="letter + index">{{letter.toUpperCase()}}</span>
 				</span>
-			</h1>
+			</div>
 		</div>
 
 		<div class="dv-parallax-name__ocupation from-bottom">
@@ -69,6 +72,7 @@
 			top: 30%;
 			transform: translateY(-50%);
 			text-align: center;
+			margin-bottom: 5rem;
 		}
 
 		// All parallax letters need position relative
@@ -77,6 +81,14 @@
 		}
 
 		h1 {
+			margin: 0;
+			padding: 0;
+			span {
+			display: none;
+			}
+		}
+
+		.style-h1 {
 			margin: 0;
 			color: $red;
 
@@ -159,7 +171,7 @@
 	@media screen and (max-width: 680px) {
 		.dv-parallax-name {
 
-			h1 > span:not(.dv-parallax-name__last-name) {
+			.style-h1 > span:not(.dv-parallax-name__last-name) {
 				font-size: 7rem;
 			}
 
