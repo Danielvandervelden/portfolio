@@ -158,12 +158,25 @@
 
 	@media screen and (max-width: 680px) {
 		.dv-parallax-name {
+
+			h1 > span:not(.dv-parallax-name__last-name) {
+				font-size: 7rem;
+			}
+
 			&__container {
 				top: 15%;
 			}
 
 			&__last-name {
-				font-size: 3.4rem !important;
+				font-size: 2.2rem !important;
+			}
+
+			h2 {
+				font-size: 2rem;
+			}
+
+			&__ocupation {
+				top: 55px;
 			}
 		}
 	}

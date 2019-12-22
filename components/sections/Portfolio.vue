@@ -48,7 +48,7 @@
 
 	.dv-portfolio {
 		min-height: 100vh;
-		padding-bottom: 8rem;
+		padding-bottom: 10rem;
 		@include full-width-background($light_grey);
 
 		h2 {

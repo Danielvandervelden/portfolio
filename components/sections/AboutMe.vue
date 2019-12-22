@@ -37,17 +37,8 @@
 			}
 		},
 		mounted() {
-			let elements = [
-				{
-					direction: 'left',
-					element: document.querySelector('.dv-about-me__left')
-				},
-				{
-					direction: 'right',
-					element: document.querySelector('.dv-about-me__right')
-				}
-			]
-			this.slideIn(elements, this.$el, 400)
+			this.slideIn([{direction: 'left',element: document.querySelector('.dv-about-me__left')},], this.$el.querySelector('.dv-about-me__left'), 400)
+			this.slideIn([{direction: 'right',element: document.querySelector('.dv-about-me__right')},], this.$el.querySelector('.dv-about-me__right'), 400)
 		}
 	}
 </script>
@@ -56,6 +47,7 @@
 
 	.dv-about-me {
 		min-height: 100vh;
+		padding-bottom: 10rem;
 		@include full-width-background($grey);
 
 		h2 {
