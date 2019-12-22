@@ -23,6 +23,5 @@
 
 	.dv-content-wrapper {
 		@include container();
-		overflow: hidden;
 	}
 </style>

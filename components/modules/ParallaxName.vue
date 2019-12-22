@@ -11,7 +11,7 @@
 
 		<div class="dv-parallax-name__ocupation from-bottom">
 			<h2>
-				<span :class="[letter !== ' ' ? 'parallax-letter' : '', index >= 11 ? 'black' : '']" v-for="(letter, index) in generateLetterArray(myself.occupation)" :key="letter + index">{{letter.toUpperCase()}}</span>
+				<span :class="[letter !== ' ' ? 'parallax-letter' : '', index < 11 ? 'red' : '']" v-for="(letter, index) in generateLetterArray(myself.occupation)" :key="letter + index">{{letter.toUpperCase()}}</span>
 			</h2>
 		</div>
 	</section>

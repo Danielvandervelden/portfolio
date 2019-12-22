@@ -1,6 +1,6 @@
 <template>
 	<section id="portfolio" class="dv-portfolio">
-		<h2 class="dv-portfolio__title">Portfolio</h2>
+		<h2 class="dv-portfolio__title">My <span class="red">Portfolio.</span></h2>
 		<div class="dv-portfolio__content">
 			<p>
 				Down below you'll be able to find all of the projects I created (or contributed to).

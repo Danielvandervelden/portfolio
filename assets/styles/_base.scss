@@ -13,7 +13,7 @@ $red: #E85A4F;
 $pink: #E98074;
 $grey: #E8E8E8;
 
-$headingcolor: $red;
+$headingcolor: #333;
 $h1size: 4rem;
 $h2size: 3.5rem;
 $h3size: 3rem;
@@ -31,6 +31,8 @@ body {
 	.sk-folding-cube {
 		display: none;
 	}
+
+	overflow-x: hidden;
 }
 
 body.loading {

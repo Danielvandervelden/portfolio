@@ -1,36 +1,18 @@
 <template>
 	<section id="contact" class="dv-contact">
-		<h2>Contact</h2>
+		<h2>Get in <span class="red">contact.</span></h2>
 
-		<form @submit.prevent="submitContactForm" method="POST">
-			<dv-input border_color="#FFF" v-model="formInput.name" label="Name" name="name" placeholder="Enter your name" type="text"></dv-input>
-			<dv-input border_color="#FFF" v-model="formInput.email" label="Email" name="email" placeholder="Enter your email address" type="email"></dv-input>
-			<dv-input border_color="#FFF" v-model="formInput.subject" label="Subject" name="subject" placeholder="Enter a subject" type="text"></dv-input>
-			<dv-input border_color="#FFF" v-model="formInput.content" label="Message" name="message" placeholder="Message" type="textarea"></dv-input>
-			<dv-button class="red" chosenType="submit">Submit</dv-button>
-		</form>
+		<p>If you would like to get in contact with me then you can either contact me through LinkedIn or via Email.</p>
+		<div class="contact-links">
+			<a class="contact-link linkedin" href="https://www.linkedin.com/in/danielvandervelden" title="Daniel van der Velden's LinkedIn"><img :src="require('@/assets/images/linkedin.svg')" alt="LinkedIn Logo"></a>
+			<a class="contact-link email" href="mailto:daanf@live.nl" title="Daniel van der Velden's email address"><img :src="require('@/assets/images/envelope.svg')" alt="Email Icon"></a>
+		</div>
 	</section>
 </template>
 
 <script>
 	export default {
-		data() {
-			return {
-				formInput: {
-					name: '',
-					email: '',
-					subject: '',
-					content: ''
-				}
-			}
-		},
-		methods: {
-			submitContactForm() {
-				if(!this.formInput.name.length == 0 && !this.formInput.email.length == 0 && !this.formInput.subject.length == 0 && !this.formInput.content.length == 0) {
-					this.$store.dispatch('frontend/portfolio/submitForm', this.formInput);
-				}
-			}
-		}
+		
 	}
 </script>
 <style scoped lang='scss'>
@@ -43,5 +25,48 @@
 
 	h2 {
 		font-size: 5rem;
+	}
+
+	.contact-links {
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;	
+		margin-top: 100px;
+	}
+
+	.contact-link {
+		position: relative;
+		transition: all .3s ease-in-out;
+
+		img {
+			height: 200px;
+			width: 200px;
+			position: relative;
+		}
+
+		&.email {
+			&:before {
+				content: '';
+				height: 100%;
+				width: 100%;
+				display: block;
+				padding: 7px 20px;
+				position: absolute;
+				background-color: #E85A4F;
+				top: -10px;
+				left: -20px;
+				border-radius: 15px;
+			}
+
+			img {
+				height: 180px;
+				width: 180px;
+			}
+		}
+
+
+		&:hover {
+			opacity: .8;
+		}
 	}
 </style>
