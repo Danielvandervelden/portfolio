@@ -52,6 +52,7 @@
 		article {
 			margin-right: 1.5rem;
 			margin-bottom: 1.5rem;
+			min-width: 7rem;
 
 			img {
 				max-height: 100%;
