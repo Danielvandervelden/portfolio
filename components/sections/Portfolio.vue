@@ -1,15 +1,17 @@
 <template>
 	<section id="portfolio" class="dv-portfolio">
-		<h2>Portfolio</h2>
-		<p>
-			Down below you'll be able to find all of the projects I created (or contributed to).
-			Obviously this portfolio is not in it, but if you're curious: it's made with VueJS/NuxtJS 
-			and NodeJS.
-		</p>
+		<h2 class="dv-portfolio__title">Portfolio</h2>
+		<div class="dv-portfolio__content">
+			<p>
+				Down below you'll be able to find all of the projects I created (or contributed to).
+				Obviously this portfolio is not in it, but if you're curious: it's made with VueJS/NuxtJS 
+				and NodeJS.
+			</p>
 
-		<p>There are many more projects I have worked on, however to put all those websites here would be too much. Instead
-			I present you with the projects I liked best.
-		</p>
+			<p>There are many more projects I have worked on, however to put all those websites here would be too much. Instead
+				I present you with the projects I liked best.
+			</p>
+		</div>
 
 		<portfolio-post-grid></portfolio-post-grid>
 
@@ -26,6 +28,19 @@
 			ArrowDown,
 			PortfolioPostGrid
 		},
+		mounted() {
+			let topSlideElements = [
+				{
+					direction: 'bottom',
+					element: this.$el.querySelector('.dv-portfolio__title')
+				},
+				{
+					direction: 'bottom',
+					element: this.$el.querySelector('.dv-portfolio__content')
+				}
+			]
+			this.slideIn(topSlideElements, this.$el, 400);
+		}
 	}
 </script>
 <style scoped lang='scss'>

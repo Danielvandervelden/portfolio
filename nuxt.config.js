@@ -39,6 +39,7 @@ module.exports = {
   */
   plugins: [
 	{ src: '~/plugins/global_components' },
+	{ src: '~/plugins/global_functions.js' }
   ],
 
   /*

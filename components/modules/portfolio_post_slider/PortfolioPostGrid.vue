@@ -25,7 +25,6 @@
 </script>
 <style scoped lang='scss'>
 	.portfolio-grid {
-		display: flex;
-		flex-wrap: wrap;
+		
 	}
 </style>

@@ -37,16 +37,17 @@
 			}
 		},
 		mounted() {
-			let element = document.getElementById('aboutme');
-			document.addEventListener('scroll', _.throttle(() => {
-				if(element.getBoundingClientRect().top < 400) {
-					let aboutMeLeft = document.querySelector('.dv-about-me__left');
-					let aboutMeRight = document.querySelector('.dv-about-me__right');
-
-					aboutMeLeft.classList.add('from-left');
-					aboutMeRight.classList.add('from-left');
+			let elements = [
+				{
+					direction: 'left',
+					element: document.querySelector('.dv-about-me__left')
+				},
+				{
+					direction: 'right',
+					element: document.querySelector('.dv-about-me__right')
 				}
-			}, 500))
+			]
+			this.slideIn(elements, this.$el, 400)
 		}
 	}
 </script>
@@ -70,10 +71,11 @@
 		}
 
 		&__left {
-			transform: translateX(-1000px);
+			transform: translateX(-50px);
 			flex: 0 1 48%;
 			margin-right: 2%;
 			transition: all .5s ease-in-out;
+			opacity: 0;
 			
 			img {
 				max-width: 300px;
@@ -81,20 +83,31 @@
 		}
 
 		&__right {
-			transform: translateX(1000px);
+			transform: translateX(50px);
 			flex: 0 1 50%;
 			transition: all .5s ease-in-out;
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			opacity: 0;
 		}
 
 		.from-left {
-			transform: translateX(0)
+			transform: translateX(0);
+			opacity: 1;
 		}
 
 		.from-right {
-			transform: translateX(0)
+			transform: translateX(0);
+			opacity: 1;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		.dv-about-me {
+			&__wrapper {
+				display: block;
+			}
 		}
 	}
 </style>

@@ -20,15 +20,10 @@ export const state = () => ({
 		{
 			name: 'Car Insurance Application',
 			id: new Date() * Math.random() + Math.random(),
-			website: '#',
-			content: `<p>This was a very big Car Insurance Application that I had to build for a client. All the current
-			client data has been stripped as well as the possibility to check for license plates. All the other components, 
-			however, are still operational and you can go through the steps as you please. It is not hooked up to a backend
-			so you don't have to worry about accidentally requesting an insurance.</p>
+			content: `<p>This was a very big Car Insurance Application that I had to build for a client. The application itself is not live yet, but as soon as it
+			is I will link it here.</p>
 			
-			<p>This application is built in purely Vue.JS and utilizes many different packages such as Vuei18n, Axios and VeeValidate. Its purpose
-			was to serve as a sort of template which could be built upon for different types of insurances even though the initial
-			idea was just car insurance.</p>`,
+			<p>This application is built in purely Vue.JS and utilizes many different packages such as Vuei18n, Axios and VeeValidate.</p>`,
 			background: require(`@/assets/images/portfolioimages/car-insurance-app.png`)
 		},
 		{
@@ -46,8 +41,11 @@ export const state = () => ({
 			id: new Date() * Math.random() + Math.random(),
 			website: 'https://www.eki.nl',
 			content: `One of the Magento 2 webshops I am particularly proud of. Built with, obviously, Magento 2. It uses
-			the core Front End technologies that are shipped with it such as Less, RequireJS and Grunt. This design was a very nice
-			one to develop and implement.`,
+			the core Front End technologies that are shipped with Magento 2 such as Less, RequireJS and Grunt.
+			
+			<p>All the "blocks" you see throughout the webshop are widgets which we developed and implemented through
+			a widget library. These are all configurable through the backend for easy creation of CMS pages and also 
+			product pages.</p>`,
 			background: require(`@/assets/images/portfolioimages/eki.png`)
 		},
 	]

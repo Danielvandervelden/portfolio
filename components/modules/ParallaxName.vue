@@ -1,6 +1,6 @@
 <template>
 	<section class="dv-parallax-name">
-		<div class="dv-parallax-name__container">
+		<div class="dv-parallax-name__container from-top">
 			<h1>
 				<span :class="letter !== ' ' ? 'parallax-letter' : ''" v-for="(letter, index) in generateLetterArray(myself.firstName)" :key="letter + index">{{letter.toUpperCase()}}</span>
 				<span class="dv-parallax-name__last-name">
@@ -9,7 +9,7 @@
 			</h1>
 		</div>
 
-		<div class="dv-parallax-name__ocupation">
+		<div class="dv-parallax-name__ocupation from-bottom">
 			<h2>
 				<span :class="[letter !== ' ' ? 'parallax-letter' : '', index >= 11 ? 'black' : '']" v-for="(letter, index) in generateLetterArray(myself.occupation)" :key="letter + index">{{letter.toUpperCase()}}</span>
 			</h2>
@@ -108,6 +108,62 @@
 
 			span {
 				letter-spacing: 1rem;
+			}
+		}
+	}
+
+	.from-top {
+		animation: fromTop .3s ease-in-out forwards;
+		animation-delay: .5s;
+		opacity: 0;
+	}
+
+	.from-bottom {
+		animation: fromBottom .3s ease-in-out forwards;
+		animation-delay: .7s;
+		opacity: 0;
+	}
+	
+	@keyframes fromTop {
+		0% {
+			opacity: 0;
+			transform: translateY(-50px);
+		}
+
+		100% {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes fromBottom {
+		0% {
+			opacity: 0;
+			transform: translateY(50px);
+		}
+
+		100% {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@media screen and (max-width: 1024px) {
+		.dv-parallax-name {
+			&__ocupation {
+				top: 25%;
+			}
+		}
+	}
+
+	@media screen and (max-width: 680px) {
+		.dv-parallax-name {
+			&__container {
+				top: 15%;
+			}
+
+			&__last-name {
+				font-size: 3.4rem !important;
 			}
 		}
 	}
