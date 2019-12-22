@@ -79,4 +79,10 @@
 			top: 0px;
 		}
 	}
+
+	@media screen and (max-width: 680px) {
+		.dv-ui__arrow-down {
+			bottom: 80px;
+		}
+	}
 </style>
