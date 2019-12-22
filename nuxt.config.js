@@ -8,9 +8,10 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-	title: 'Daniel van der Velden',
+	  title: "Daniel van der Velden's portfolio",
     meta: [
-      { charset: 'utf-8' },
+	  { charset: 'utf-8' },
+	  { name: "title", property: "og:title", content: "Daniel van der Velden's portfolio" },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: pkg.description }
     ],
