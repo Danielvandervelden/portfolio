@@ -12,6 +12,7 @@ module.exports = {
     meta: [
 	  { charset: 'utf-8' },
 	  { name: "title", property: "og:title", content: "Daniel van der Velden's portfolio" },
+	  { name: 'image', property: "og:image", content: "/ogimage.png" },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: pkg.description }
     ],
