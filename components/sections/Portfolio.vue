@@ -3,9 +3,8 @@
 		<h2 class="dv-portfolio__title">My <span class="red">Portfolio.</span></h2>
 		<div class="dv-portfolio__content">
 			<p>
-				Down below you'll be able to find all of the projects I created (or contributed to).
-				Obviously this portfolio is not in it, but if you're curious: it's made with VueJS/NuxtJS 
-				and NodeJS.
+				Down below you'll be able to find all of the projects I created,or contributed to. If your curious, this 
+				portfolio website was made using Vue.js/Nuxt.js.
 			</p>
 
 			<p>There are many more projects I have worked on, however to put all those websites here would be too much. Instead

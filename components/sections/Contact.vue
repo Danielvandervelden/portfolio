@@ -82,6 +82,7 @@
 				top: -10px;
 				left: -20px;
 				border-radius: 15px;
+				box-sizing: content-box;
 			}
 
 			img {

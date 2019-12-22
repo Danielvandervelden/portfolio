@@ -39,7 +39,6 @@
 		},
 		methods: {
 			createNewPortfolioItem() {
-				console.log('dispatching');
 				this.$store.dispatch('admin/portfolio/createNewPortfolioItem', this.item);
 			}
 		}

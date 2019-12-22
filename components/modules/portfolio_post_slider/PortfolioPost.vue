@@ -19,7 +19,6 @@
 			'link'
 		],
 		mounted() {
-			console.log(this.$el);
 			this.slideIn([{direction: 'bottom', element: this.$el}], this.$el, 400);
 		}
 	}
