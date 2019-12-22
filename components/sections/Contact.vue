@@ -63,11 +63,14 @@
 	.contact-link {
 		position: relative;
 		transition: all .3s ease-in-out;
+		display: block;
+		cursor: pointer;
 
 		img {
 			height: 200px;
 			width: 200px;
 			position: relative;
+			pointer-events: none;
 		}
 
 		&.email {
@@ -83,6 +86,7 @@
 				left: -20px;
 				border-radius: 15px;
 				box-sizing: content-box;
+				pointer-events: none;
 			}
 
 			img {
@@ -93,7 +97,7 @@
 
 
 		&:hover {
-			opacity: .8;
+			opacity: .8 !important;
 		}
 	}
 
