@@ -2,7 +2,7 @@
 	<section id="contact" class="dv-contact">
 		<h2>Get in <span class="red">contact.</span></h2>
 
-		<p>If you would like to get in contact with me then you can either contact me through LinkedIn or via Email.</p>
+		<p>If you would like to get in contact with me then you can reach me through LinkedIn or via Email.</p>
 		<div class="contact-links">
 			<a target="_blank" class="contact-link linkedin" href="https://www.linkedin.com/in/danielvandervelden" title="Daniel van der Velden's LinkedIn"><img :src="require('@/assets/images/linkedin.svg')" alt="LinkedIn Logo"></a>
 			<a target="_blank" class="contact-link email" href="mailto:daanf@live.nl" title="Daniel van der Velden's email address"><img :src="require('@/assets/images/envelope.svg')" alt="Email Icon"></a>
