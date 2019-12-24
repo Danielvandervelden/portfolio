@@ -1,6 +1,6 @@
 <template>
 	<div :class="link ? 'with-button' : ''" class="dv-portfolio__item">
-		<div class="dv-portfolio__item--image" :style="{'background-image': 'url(' + background + ')'}"></div>
+		<div class="dv-portfolio__item--image"><img :src="background" :alt="name"></div>
 		<div class="dv-portfolio__item--content" :data-id="id">
 			<h4 class="dv-portfolio__item--title">{{name}}</h4>
 			<div v-html="content"></div>
@@ -51,11 +51,24 @@
 		}
 
 		&--image {
-			height: 200px;
+			height: 250px;
 			background-size: cover;
 			background-repeat: no-repeat;
 			width: 100%;
 			border-radius: .8rem .8rem 0 0;
+			position: relative;
+			overflow: hidden;
+
+			img {
+				position: absolute;
+				min-height: 100%;
+				max-width: 100%;
+				top: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				width: auto;
+				height: auto;
+			}
 		}
 
 		&--content {

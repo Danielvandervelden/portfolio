@@ -37,7 +37,7 @@
 				}
 			];
 
-			this.slideIn(contactElements, this.$el.querySelector('.contact-links'), 400);
+			this.slideIn(contactElements, this.$el, 400);
 		}
 	}
 </script>
@@ -104,32 +104,29 @@
 	@media screen and (max-width: 680px) {
 		.dv-contact {
 			.contact-links {
+				margin-top: 5rem;
+				display: block;
+				padding-bottom: 1.5rem;
+
 				a {
-					img {
-						height: 50px;
-						width: 50px;
+					flex-basis: 100%;
+					display: block;
+					overflow: hidden;
+					height: 200px;
+					width: 200px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					border-radius: 1.3rem;
+					margin: 0 auto;
+
+					+ a {
+						margin-top: 4rem;
 					}
 
-					&.email {
-						height: 50px;
-						width: 50px;
-						display: flex;
-						justify-content: center;
-						align-items: center;
-						position: relative;
-						top: -4px;
-						
-						&:before {
-							padding: 0;
-							border-radius: .4rem;
-							left: 0;
-							top: 0;
-						}
-
-						img {
-							height: 30px;
-							width: 30px;
-						}
+					&.email img {
+						height: 150px;
+						width: 150px;
 					}
 				}
 			}

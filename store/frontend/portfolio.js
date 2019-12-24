@@ -37,7 +37,7 @@ export const state = () => ({
 			background: require(`@/assets/images/portfolioimages/saarbakt.png`)
 		},
 		{
-			name: 'EKI Magento 2 Webshop',
+			name: 'Magento 2 Webshop',
 			id: new Date() * Math.random() + Math.random(),
 			website: 'https://www.eki.nl',
 			content: `One of the Magento 2 webshops I am particularly proud of. Built with, obviously, Magento 2. It uses

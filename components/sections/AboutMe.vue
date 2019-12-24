@@ -5,9 +5,20 @@
 				<h2>About <span class="red">Me.</span></h2>
 				<div class="dv-about-me__left--content">
 					<p>Hi!</p>
-					<p>I'm Daniel van der Velden, 26 years old and a full stack webdeveloper. My expertise lies in 
+					<p>I'm Daniel van der Velden, {{calculateAge(2, 9, 1993)}} years old and a full stack webdeveloper. My expertise lies in 
 						creating web applications in VueJS/NuxtJS, Magento 2 Webshops and Wordpress. I do both Frontend development
 						and Backend development and I do all of this with Javascript.
+					</p>
+					<p>
+						I started web development in October 2017. After a few months of hardcore studying everyday, next to my job as a
+						restaurant manager, I made an attempt at applying for a Junior Frontend Webdeveloper job. Against all the odds I
+						got the very first job I applied for. 
+					</p>
+
+					<p>
+						After I got the job I started picking up skills very quickly, and I soon became familiar with Wordpress, Magento 2
+						and its core frontend & backend technologies/languages. After a while I wanted to learn something new and exciting
+						so I started learning Vue.js and Nuxt.js which are currently my main weapon of choice.
 					</p>
 					<!-- <img src="~assets/images/Person-placeholder.jpg" alt="Daniel van der Velden"> -->
 				</div>
@@ -31,9 +42,21 @@
 			SkillSlider,
 			ArrowDown
 		},
-		data() {
-			return {
-				
+		methods: {
+			calculateAge(birthMonth, birthDay, birthYear) {
+				var currentDate = new Date();
+				var currentYear = currentDate.getFullYear();
+				var currentMonth = currentDate.getMonth();
+				var currentDay = currentDate.getDate(); 
+				var calculatedAge = currentYear - birthYear;
+
+				if (currentMonth < birthMonth - 1) {
+					calculatedAge--;
+				}
+				if (birthMonth - 1 == currentMonth && currentDay < birthDay) {
+					calculatedAge--;
+				}
+				return calculatedAge;
 			}
 		},
 		mounted() {
@@ -59,7 +82,8 @@
 
 		&__wrapper {
 			display: flex;
-			height: 100%;
+			min-height: inherit;
+			align-items: center;
 		}
 
 		&__left {
