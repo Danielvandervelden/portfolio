@@ -15,7 +15,7 @@ export const state = () => ({
 			
 			<p>On the frontend there is the possibility to search for a weapon, planet or ship and actually posting a find is also
 			possible if the user registers. Registration is done through the Firebase backend as well as the logging in part. When a user registers
-			they need to confirm their email address by clicking a confirmation link. As of that moment they are a fullfledget member and they are 
+			they need to confirm their email address by clicking a confirmation link. As of that moment they are a fully fledged member and they are 
 			allowed to post all of their findings.</p>
 			
 			<p>
