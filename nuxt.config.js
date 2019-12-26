@@ -57,7 +57,8 @@ module.exports = {
     '@nuxtjs/axios',
 	'@nuxtjs/pwa',
 	'nuxt-lazy-load',
-	'@nuxtjs/sitemap'
+	'@nuxtjs/sitemap',
+	'@nuxtjs/robots'
   ],
 
   buildModules: [
