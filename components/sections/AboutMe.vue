@@ -5,7 +5,7 @@
 				<h2>About <span class="red">Me.</span></h2>
 				<div class="dv-about-me__left--content">
 					<p>Hi!</p>
-					<p>I'm Daniel van der Velden, {{calculateAge(2, 9, 1993)}} years old and a full stack webdeveloper. My expertise lies in 
+					<p>I'm Daniel van der Velden, {{calculateAge(2, 9, 1993)}} years old and a Frontend webdeveloper. My expertise lies in 
 						creating web applications in VueJS/NuxtJS, Magento 2 Webshops and Wordpress. I do both Frontend development
 						and Backend development and I do all of this with Javascript.
 					</p>

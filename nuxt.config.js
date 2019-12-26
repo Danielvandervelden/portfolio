@@ -79,7 +79,7 @@ module.exports = {
     }
   },
 
-  transition: {
+  pageTransition: {
 	  name: 'fade',
 	  mode: 'out-in'
   }
