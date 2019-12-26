@@ -8,7 +8,7 @@
 			</p>
 
 			<p>
-				Many of these different packages you can see in the about me section. As for projects that I have worked on: there are quite a lot. Instead
+				Many of these you can see in the about me section. As for projects that I have worked on: there are quite a lot. Instead
 				of showcasing all of these projects, I prefer to show a select few. These select few can be found down below.
 			</p>
 		</div>
