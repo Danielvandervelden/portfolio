@@ -1,7 +1,7 @@
 <template>
 	<nuxt-link v-if="checkProps" tag="a" :to="link" class="button"><slot /></nuxt-link>
 	<button class="button" v-else-if="chosenType == 'submit'" :type="chosenType"><slot /></button>
-	<a rel="noopener" :href="extLink" target="_blank" class="button" v-else><slot /></a>
+	<a :title="title ? title : ''" rel="noopener" :href="extLink" target="_blank" class="button" v-else><slot /></a>
 </template>
 
 <script>
@@ -9,7 +9,8 @@
 		props: [
 			'link',
 			'chosenType',
-			'extLink'
+			'extLink',
+			'title'
 		],
 		data() {
 			return {

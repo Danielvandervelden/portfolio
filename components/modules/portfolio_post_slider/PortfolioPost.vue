@@ -4,7 +4,7 @@
 		<div class="dv-portfolio__item--content" :data-id="id">
 			<h4 class="dv-portfolio__item--title">{{name}}</h4>
 			<div v-html="content"></div>
-			<dv-button v-if="link" class="red dv-portfolio__item--link" :extLink="link">Visit {{name}}</dv-button>
+			<dv-button :title="name" v-if="link" class="red dv-portfolio__item--link" :extLink="link">Visit {{name}}</dv-button>
 		</div>
 	</div>
 </template>
