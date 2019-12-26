@@ -46,7 +46,7 @@
 			}
 
 			&:nth-child(odd):not(:first-child) {
-				margin-top: -270px;
+				margin-top: -250px;
 			}
 		}
 
