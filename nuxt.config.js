@@ -8,19 +8,24 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-	  title: "Daniel van der Velden's portfolio",
+	  title: "Daniel van der Velden a frontend webdeveloper portfolio",
     meta: [
 	  { charset: 'utf-8' },
-	  { name: "title", property: "og:title", content: "Daniel van der Velden's portfolio" },
+	  { name: "title", property: "og:title", content: "Daniel van der Velden a frontend webdeveloper portfolio" },
 	  { name: 'image', property: "og:image", content: "/ogimage.png" },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+	  { name: 'url', property: "og:url", content: "https://www.imdaniel.dev" },
+	  { name: 'type', property: "og:type", content: "website" },
+	  { hid: 'description', name: 'description', content: pkg.description },
+	  { name: "twitter:title", property: "twitter:title", content: "Daniel van der Velden a frontend webdeveloper portfolio" },
+	  { name: 'twitter:image', property: "twitter:image", content: "/ogimage.png" },
+	  { name: 'viewport', content: 'width=device-width, initial-scale=1' }
+	
     ],
     link: [
 	  { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-	  { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Hind+Siliguri:300,700" },
-	  { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Work+Sans:300,900" },
-	  { rel: "stylesheet", href: "https://use.fontawesome.com/releases/v5.7.1/css/all.css" },
+	  { rel: "stylesheet", type: "text/css", href: "https://fonts.googleapis.com/css?family=Hind+Siliguri:300,700", defer: true },
+	  { rel: "stylesheet", type: "text/css", href: "https://fonts.googleapis.com/css?family=Work+Sans:300,900", defer: true },
+	  { rel: "stylesheet", type: "text/css", href: "https://use.fontawesome.com/releases/v5.7.1/css/all.css", defer: true },
     ]
   },
 
