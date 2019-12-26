@@ -3,12 +3,13 @@
 		<h2 class="dv-portfolio__title">My <span class="red">Portfolio.</span></h2>
 		<div class="dv-portfolio__content">
 			<p>
-				Down below you'll be able to find some of the projects I created, or contributed to. If you're curious, this 
-				website you are currently on was made using Vue.js/Nuxt.js.
+				Down below you'll be able to find some of the projects I created, or contributed to. There are quite some different websites
+				that I have worked on. These website have been built with many different technologies, libraries, frameworks and packages.
 			</p>
 
-			<p>There are many more projects I have worked on, however to put all those websites here would be too much. Instead
-				I present you with a select few.
+			<p>
+				Many of these different packages you can see in the about me section. As for projects that I have worked on: there are quite a lot. Instead
+				of showcasing all of these projects, I prefer to show a select few. These select few can be found down below.
 			</p>
 		</div>
 

@@ -3,7 +3,9 @@
 		<div class="dv-contact__wrapper">
 			<h2>Get in <span class="red">contact.</span></h2>
 
-			<p>If you would like to get in contact with me then you can reach me through LinkedIn or via Email.</p>
+			<p>If I sparked your interest and you feel like you would like to contact me, that is ofcourse not a problem! Please send me a connection request
+				through LinkedIn or an e-mail. I will try to get back to you as soon as possible.
+			</p>
 			<div class="contact-links">
 				<a rel="noopener" target="_blank" class="contact-link linkedin" href="https://www.linkedin.com/in/danielvandervelden" title="Daniel van der Velden's LinkedIn"><img :src="require('@/assets/images/linkedin.svg')" alt="LinkedIn Logo"></a>
 				<a rel="noopener" target="_blank" class="contact-link email" href="mailto:daanf@live.nl" title="Daniel van der Velden's email address"><img :src="require('@/assets/images/envelope.svg')" alt="Email Icon"></a>

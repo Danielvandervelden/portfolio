@@ -25,6 +25,6 @@
 </script>
 <style scoped lang='scss'>
 	.portfolio-grid {
-		
+		margin-top: 7rem;
 	}
 </style>

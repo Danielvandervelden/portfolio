@@ -28,7 +28,7 @@
 		background-color: #FFF;
 		box-sizing: border-box;
 		width: 48%;
-		margin-bottom: 30px;
+		margin-bottom: 50px;
 		position: relative;
 		border-radius: .8rem;
 		transition: all .3s ease-in-out;
@@ -46,7 +46,7 @@
 			}
 
 			&:nth-child(odd):not(:first-child) {
-				margin-top: -100px;
+				margin-top: -270px;
 			}
 		}
 
