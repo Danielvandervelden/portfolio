@@ -51,7 +51,8 @@ module.exports = {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
 	'@nuxtjs/pwa',
-	'nuxt-lazy-load'
+	'nuxt-lazy-load',
+	'@nuxtjs/sitemap'
   ],
 
   buildModules: [
