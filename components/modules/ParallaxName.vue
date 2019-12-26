@@ -1,9 +1,9 @@
 <template>
 	<section class="dv-parallax-name">
+		<h1>
+			Daniel van der Velden
+		</h1>
 		<div class="dv-parallax-name__container from-top">
-			<h1>
-				<span>Daniel van der Velden</span>
-			</h1>
 			<div class="style-h1">
 				<span :class="letter !== ' ' ? 'parallax-letter' : ''" v-for="(letter, index) in generateLetterArray(myself.firstName)" :key="letter + index">{{letter.toUpperCase()}}</span>
 				<span class="dv-parallax-name__last-name">
@@ -83,8 +83,17 @@
 		h1 {
 			margin: 0;
 			padding: 0;
-			span {
-			display: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			
+			&:before {
+				content: '';
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				display: block;
+				background-color: #EAE7DC;
 			}
 		}
 
