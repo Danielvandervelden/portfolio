@@ -1,15 +1,12 @@
 <template>
 	<section class="dv-parallax-name">
-		<h1>
-			Daniel van der Velden
-		</h1>
 		<div class="dv-parallax-name__container from-top">
-			<div class="style-h1">
+			<h1 class="style-h1">
 				<span :class="letter !== ' ' ? 'parallax-letter' : ''" v-for="(letter, index) in generateLetterArray(myself.firstName)" :key="letter + index">{{letter.toUpperCase()}}</span>
 				<span class="dv-parallax-name__last-name">
 					<span :class="letter !== ' ' ? 'parallax-letter' : ''" v-for="(letter, index) in generateLetterArray(myself.lastName)" :key="letter + index">{{letter.toUpperCase()}}</span>
 				</span>
-			</div>
+			</h1>
 		</div>
 
 		<div class="dv-parallax-name__ocupation from-bottom">
@@ -27,7 +24,7 @@
 		data() {
 			return {
 				myself: {
-					firstName: "Daniel",
+					firstName: "Daniel ",
 					lastName: "van der Velden",
 					occupation: "frontend webdeveloper"
 				}
@@ -83,18 +80,6 @@
 		h1 {
 			margin: 0;
 			padding: 0;
-			position: absolute;
-			top: 0;
-			left: 0;
-			
-			&:before {
-				content: '';
-				position: absolute;
-				height: 100%;
-				width: 100%;
-				display: block;
-				background-color: #EAE7DC;
-			}
 		}
 
 		.style-h1 {
