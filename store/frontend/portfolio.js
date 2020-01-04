@@ -59,8 +59,8 @@ export const state = () => ({
 			name: 'Magento 2 Webshop',
 			id: new Date() * Math.random() + Math.random(),
 			website: 'https://www.eki.nl',
-			content: `One of the Magento 2 webshops I am particularly proud of. Built with, obviously, Magento 2. It uses
-			the core Front End technologies that are shipped with Magento 2 such as Less, RequireJS and Grunt.
+			content: `<p>One of the Magento 2 webshops I am particularly proud of. Built with, obviously, Magento 2. It uses
+			the core Front End technologies that are shipped with Magento 2 such as Less, RequireJS and Grunt.</p>
 			
 			<p>All the "blocks" you see throughout the webshop are widgets which we developed and implemented through
 			a widget library. These are all configurable through the backend for easy creation of CMS pages and also 

@@ -18,7 +18,7 @@
 					<p>
 						After I got the job I started picking up skills very quickly, and I soon became familiar with Wordpress, Magento 2
 						and its core frontend & backend technologies/languages. After a while I wanted to learn something new and exciting
-						so I started learning Vue.js and Nuxt.js which are currently my main weapon of choice.
+						so I started learning Vue.js and Nuxt.js which are currently my main weapons of choice.
 					</p>
 					<!-- <img src="~assets/images/Person-placeholder.jpg" alt="Daniel van der Velden"> -->
 				</div>
