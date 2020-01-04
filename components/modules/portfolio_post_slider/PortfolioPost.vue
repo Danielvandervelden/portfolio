@@ -3,7 +3,7 @@
 		<div class="dv-portfolio__item--image"><img :src="background" :alt="name"></div>
 		<div class="dv-portfolio__item--content" :data-id="id">
 			<h4 class="dv-portfolio__item--title">{{name}}</h4>
-			<p v-html="content"></p>
+			<div class="content" v-html="content"></div>
 			<dv-button :title="name" v-if="link" class="red dv-portfolio__item--link" :extLink="link">Visit {{name}}</dv-button>
 		</div>
 	</div>
@@ -37,6 +37,10 @@
 
 		&:nth-child(odd) {
 			margin-right: 4%;
+		}
+		
+		.content {
+			line-height: 2.6rem;
 		}
 
 
