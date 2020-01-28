@@ -49,10 +49,11 @@ export const state = () => ({
 			name: 'Saarbakt',
 			id: new Date() * Math.random() + Math.random(),
 			website: 'https://www.saarbakt.nl',
-			content: `The very first website I made. This one was for my sister. She wanted a blog to post
-			all sorts of different recipes on. It is built using Wordpress and everything is compiled/transpiled using
-			Webpack. It has been while since it was built and I have learned a ridiculous amount since then. Most likely
-			I would setup the entire project much better.`,
+			content: `<p>This wordpress blog was the very first website I have made. It was created for my sister to post all sorts of recipes about
+			baking and cooking.</p>
+			
+			<p>Throughout the years I've rewritten it about 2 or 3 times and every single time I think to myself: "what was I doing?". The most recent rewrite includes a ridiculous amount of updates
+			under which: lazy loading images, a complete webpack configuration, better image scaling/optimalisation and SEO updates.</p>`,
 			background: require(`@/assets/images/portfolioimages/saarbakt.png`)
 		},
 		{
