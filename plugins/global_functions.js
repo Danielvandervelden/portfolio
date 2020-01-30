@@ -199,5 +199,26 @@ Vue.mixin({
 				}
 			}
 		},
+
+		openPopup(obj) {
+			let popup = document.getElementById(obj.popup);
+			popup.classList.add('popup-open');
+			document.body.classList.add('backdrop');
+
+			document.body.addEventListener(this.clickEvent(), backdropListener.bind(this), true);
+
+			function backdropListener(e) {			
+				if(e.target.closest('.portfolio-popup') === null) {
+					this.closePopup({popup: obj.popup, post: obj.post})
+				}
+			}
+		},
+
+		closePopup(obj) {
+			let popup = document.getElementById(obj.popup);
+			popup.classList.remove('popup-open');
+			document.body.classList.remove('backdrop');
+			this.scrollTo(`#${obj.post}`, 100);
+		}
 	}
 })
