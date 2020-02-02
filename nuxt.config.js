@@ -68,13 +68,8 @@ module.exports = {
 	'@nuxtjs/sitemap',
 	['@nuxtjs/robots', {
 		
-	}],
-	'@bazzite/nuxt-optimized-images'
+	}]
   ],
-
-  optimizedImages: {
-    optimizeImages: true
-  }
 
   buildModules: [
 	["@nuxtjs/google-analytics", {
@@ -98,7 +93,7 @@ module.exports = {
     */
     extend(config, ctx) {
       
-    }
+	}
   },
 
   pageTransition: {
