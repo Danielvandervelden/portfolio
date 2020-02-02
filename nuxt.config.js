@@ -113,7 +113,12 @@ module.exports = {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
-      
+		if (ctx && ctx.isClient) {
+			config.optimization.splitChunks.minSize = 30000
+			config.optimization.splitChunks.maxSize = 50000
+			config.optimization.splitChunks.chunks = 'async'
+			config.optimization.splitChunks.minChunks = 1
+		  }
 	},
 	crossorigin: 'crossorigin'
   },
