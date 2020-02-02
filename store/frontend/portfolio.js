@@ -8,6 +8,7 @@ export const state = () => ({
 		{
 			name: 'NMS Database',
 			id: new Date() * Math.random() + Math.random(),
+			tech: ['Vue.js', 'Nuxt.js', 'Vuex', 'Firebase', 'Node.js', 'Webpack', 'SCSS'],
 			website: 'https://nmsdatabase.com',
 			content: `<p>This is by far the biggest project I have ever done. It started out of love for the game
 			"No Man's Sky". It ended up being a project that I can add to my portfolio since I wouldn't have time
@@ -27,6 +28,7 @@ export const state = () => ({
 		{
 			name: 'Car Insurance Application',
 			id: new Date() * Math.random() + Math.random(),
+			tech: ['Vue.js', 'Vuex', 'Vuei18n', 'Vuelidate', 'Axios', 'Webpack', 'SCSS'],
 			content: `<p>
 				This was a very big Car Insurance Application that I had to build for a client. The application itself is not live yet, but as soon as it
 				is I will link it here.
@@ -48,6 +50,7 @@ export const state = () => ({
 		{
 			name: 'Saarbakt',
 			id: new Date() * Math.random() + Math.random(),
+			tech: ['Wordpress', 'Webpack', 'PHP', 'SCSS'],
 			website: 'https://www.saarbakt.nl',
 			content: `<p>This wordpress blog was the very first website I have made. It was created for my sister to post all sorts of recipes about
 			baking and cooking.</p>
@@ -59,6 +62,7 @@ export const state = () => ({
 		{
 			name: 'Magento 2 Webshop',
 			id: new Date() * Math.random() + Math.random(),
+			tech: ['Magento2', 'Grunt', 'PHP', 'LESS'],
 			website: 'https://www.eki.nl',
 			content: `<p>One of the Magento 2 webshops I am particularly proud of. Built with, obviously, Magento 2. It uses
 			the core Front End technologies that are shipped with Magento 2 such as Less, RequireJS and Grunt.</p>

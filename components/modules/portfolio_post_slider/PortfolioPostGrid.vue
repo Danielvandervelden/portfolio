@@ -13,6 +13,7 @@
 		:id="item.name"
 		:content="item.content"
 		:link="item.website"
+		:tech="item.tech"
 		:background="item.background"></portfolio-popup>
 	</div>
 </template>

@@ -6,6 +6,11 @@
 			<img :src="background" :alt="id">
 			<div class="content">
 				<h2>{{id}}</h2>
+				<div class="tech">
+					<strong>Tech used:</strong>
+					<span v-for="item in tech" :key="`${item + id}`">{{item}}<span class="seperator">{{item !== tech[tech.length -1] ? '|' : ''}}</span></span>
+				</div>
+				<hr>
 				<div class="portfolio-popup__content" v-html="content"></div>
 				<div class="button-wrapper">
 					<dv-button :title="id" class="red" :ext_link="link">Visit {{id}}</dv-button>
@@ -17,7 +22,7 @@
 
 <script>
 	export default {
-		props: ['id', 'content', 'link', 'background'],
+		props: ['id', 'content', 'link', 'background', 'tech'],
 		methods: {
 			closePopupWindow() {
 				this.closePopup({popup: this.id.toLowerCase().replace(/[^A-Z0-9]/ig, '_') + '-popup', post: this.id.toLowerCase().replace(/[^A-Z0-9]/ig, '_')})
@@ -65,6 +70,16 @@
 
 			}
 
+			.tech {
+				span:not(:last-of-type):not(.seperator) {
+					margin-right: .5rem;
+				}
+
+				.seperator {
+					margin-left: .5rem;
+				}
+			}
+
 			h2 {
 				padding-top: 0;
 			}
@@ -86,7 +101,8 @@
 	@media screen and (min-width: 768px) {
 		.portfolio-popup {
 			position: absolute;
-			width: 600px;
+			max-width: 700px;
+			width: 100%;
 			height: 90vh;
 			left: 50%;
 			top: 50%;

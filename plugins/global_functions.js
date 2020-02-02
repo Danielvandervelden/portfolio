@@ -218,7 +218,7 @@ Vue.mixin({
 			let popup = document.getElementById(obj.popup);
 			popup.classList.remove('popup-open');
 			document.body.classList.remove('backdrop');
-			this.scrollTo(`#${obj.post}`, 100);
+			// this.scrollTo(`#${obj.post}`, 100);
 		}
 	}
 })
