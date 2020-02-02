@@ -4,7 +4,7 @@
 		<div class="dv-ui__arrow-down--wrapper">
 			<span class="dv-ui__arrow-down--title"><slot /></span>
 			<div class="dv-ui__arrow-down--arrow">
-				<i class="fas fa-chevron-down"></i>
+				<font-awesome-icon :icon="['fas', 'chevron-down']"/>
 			</div>
 		</div>
 		</a>

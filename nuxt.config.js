@@ -23,9 +23,8 @@ module.exports = {
     ],
     link: [
 	  { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-	  { rel: "stylesheet", type: "text/css", href: "https://fonts.googleapis.com/css?family=Hind+Siliguri:300,700display=swap", defer: true },
-	  { rel: "stylesheet", type: "text/css", href: "https://fonts.googleapis.com/css?family=Work+Sans:300,900display=swap", defer: true },
-	  { rel: "stylesheet", type: "text/css", href: "https://use.fontawesome.com/releases/v5.7.1/css/all.cssdisplay=swap", defer: true },
+	  { rel: "stylesheet", type: "text/css", href: "https://fonts.googleapis.com/css?family=Hind+Siliguri:300,700&display=swap", defer: true },
+	  { rel: "stylesheet", type: "text/css", href: "https://fonts.googleapis.com/css?family=Work+Sans:300,900&display=swap", defer: true }
     ]
   },
 
@@ -59,7 +58,21 @@ module.exports = {
 	'nuxt-lazy-load',
 	'@nuxtjs/sitemap',
 	'@nuxtjs/robots',
-	'@bazzite/nuxt-optimized-images'
+	'@bazzite/nuxt-optimized-images',
+	[
+		'nuxt-fontawesome', {
+			imports: [
+				{
+				  set: '@fortawesome/free-solid-svg-icons',
+				  icons: ['fas']
+				},
+				{
+				  set:'@fortawesome/free-brands-svg-icons',
+				  icons: ['fab']
+				}
+			  ]
+		}
+	]
   ],
 
   optimizedImages: {
