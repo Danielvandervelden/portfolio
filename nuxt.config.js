@@ -4,6 +4,14 @@ const pkg = require('./package')
 module.exports = {
   mode: 'universal',
 
+  render: {
+  	bundleRenderer: {
+  		shouldPreload: (file, type) => {
+  			return ['script', 'style', 'font'].includes(type)
+  		}
+  	}
+  }
+
   /*
   ** Headers of the page
   */
@@ -22,10 +30,14 @@ module.exports = {
 	
     ],
     link: [
-	  { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-	  { rel: "stylesheet", type: "text/css", href: "https://fonts.googleapis.com/css?family=Hind+Siliguri:300,700&display=swap", defer: true },
-	  { rel: "stylesheet", type: "text/css", href: "https://fonts.googleapis.com/css?family=Work+Sans:300,900&display=swap", defer: true }
+	  { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
+  },
+
+  webfontloader: {
+    google: {
+      families: ['Hind+Siliguri:300,700&display=swap', 'Work+Sans:300,900&display=swap'] //Loads Lato font with weights 400 and 700
+    }
   },
 
   /*
