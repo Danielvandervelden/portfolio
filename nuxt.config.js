@@ -66,10 +66,13 @@ module.exports = {
 	'@nuxtjs/pwa',
 	'nuxt-lazy-load',
 	'@nuxtjs/sitemap',
-	['@nuxtjs/robots', {
-		
-	}]
+	'@nuxtjs/robots',
+	'@bazzite/nuxt-optimized-images'
   ],
+
+  optimizedImages: {
+    optimizeImages: true
+  },
 
   buildModules: [
 	["@nuxtjs/google-analytics", {
