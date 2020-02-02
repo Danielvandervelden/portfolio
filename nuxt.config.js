@@ -96,7 +96,8 @@ module.exports = {
     */
     extend(config, ctx) {
       
-	}
+	},
+	crossorigin: 'anonymous'
   },
 
   pageTransition: {
