@@ -5,7 +5,7 @@
 			<div class="image-wrapper">
 				<img :src="background" :alt="id">
 			</div>
-			<div class="content">
+			<div class="content" :style="link ? 'height: 50%' : 'height: 60%'">
 				<h2>{{id}}</h2>
 				<div class="tech">
 					<strong>Tech used:</strong>
@@ -13,7 +13,7 @@
 				</div>
 				<hr>
 				<div class="portfolio-popup__content" v-html="content"></div>
-				<div class="button-wrapper">
+				<div v-if="link" class="button-wrapper">
 					<dv-button :title="id" class="red" :ext_link="link">Visit {{id}}</dv-button>
 				</div>
 			</div>
@@ -76,7 +76,6 @@
 
 			.content {
 				padding: 1.5rem;
-				height: 50%;
 				overflow: auto;
 			}
 
@@ -103,7 +102,7 @@
 				display: flex;
 				justify-content: flex-end;
 
-				a {
+				a:last-of-type {
 					width: 100%;
 					text-align: center;
 				}
