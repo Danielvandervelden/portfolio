@@ -4,14 +4,6 @@ const pkg = require('./package')
 module.exports = {
   mode: 'universal',
 
-  render: {
-    bundleRenderer: {
-      shouldPreload: (file, type) => {
-        return ['script', 'style', 'font'].includes(type)
-      }
-    }
-  },
-
   /*
   ** Headers of the page
   */
