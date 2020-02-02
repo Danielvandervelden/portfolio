@@ -76,7 +76,17 @@
 
 			.button-wrapper {
 				display: flex;
+				flex-wrap: wrap;
 				justify-content: space-between;
+
+				a {
+					flex: 100% 0 1;
+					text-align: center;
+
+					+ a {
+						margin-top: 1rem;
+					}
+				}
 			}
 		}
 	}
@@ -115,6 +125,15 @@
 				position: absolute;
 				bottom: 1.5rem;
 				right: 1.5rem;
+				flex-wrap: nowrap;
+
+				a {
+					flex: auto 0 1;
+
+					+ a {
+						margin-top: 0;
+					}
+				}
 			}
 
 			&:hover {

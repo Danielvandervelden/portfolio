@@ -2,13 +2,14 @@
 	<div :id="`${id.toLowerCase().replace(/[^A-Z0-9]/ig, '_')}-popup`" class="portfolio-popup__wrapper">
 		<a href="#" @click.prevent="closePopupWindow" class="portfolio-popup__close"><i class="fas fa-times"></i></a>
 		<div class="portfolio-popup">
-			
-			<img :src="background" :alt="id">
+			<div class="image-wrapper">
+				<img :src="background" :alt="id">
+			</div>
 			<div class="content">
 				<h2>{{id}}</h2>
 				<div class="tech">
 					<strong>Tech used:</strong>
-					<span v-for="item in tech" :key="`${item + id}`">{{item}}<span class="seperator">{{item !== tech[tech.length -1] ? '|' : ''}}</span></span>
+					<span v-for="item in tech" :key="`${item + id}`">{{item}}<span class="seperator">{{item !== tech[tech.length -1] ? ',' : ''}}</span></span>
 				</div>
 				<hr>
 				<div class="portfolio-popup__content" v-html="content"></div>
@@ -61,32 +62,51 @@
 			background-color: #FFF;
 			pointer-events: none;
 
+			.image-wrapper {
+				height: 40%;
+				display: flex;
+				align-items: flex-start;
+				justify-content: center;
+				overflow: hidden;
+			}
+
 			img {
-				max-width: 100%;
+				width: 100%;
 			}
 
 			.content {
 				padding: 1.5rem;
-
+				height: 50%;
+				overflow: auto;
 			}
 
 			.tech {
-				span:not(:last-of-type):not(.seperator) {
-					margin-right: .5rem;
+				display: flex;
+				flex-wrap: wrap;
+
+				strong {
+					margin-right: 1rem;
 				}
 
-				.seperator {
-					margin-left: .5rem;
+				span:not(:last-of-type):not(.seperator) {
+					margin-right: .5rem;
+					margin-bottom: 1rem;
 				}
 			}
 
 			h2 {
 				padding-top: 0;
+				font-size: 2.5rem;
 			}
 
 			.button-wrapper {
 				display: flex;
 				justify-content: flex-end;
+
+				a {
+					width: 100%;
+					text-align: center;
+				}
 			}
 
 
@@ -109,11 +129,25 @@
 			transform: translate(-50%, -50%);
 			border-radius: 5px;
 			background-color: #FFF;
-			overflow: auto;
 
 			&__wrapper {
 				background-color: transparent;
 				overflow: hidden;
+			}
+
+			.content {
+				
+			}
+
+			h2 {
+				font-size: 3.5rem;
+			}
+
+			.button-wrapper {
+				position: absolute;
+				bottom: 1.5rem;
+				left: 1.5rem;
+				width: calc(100% - 30px);
 			}
 		}
 	}
