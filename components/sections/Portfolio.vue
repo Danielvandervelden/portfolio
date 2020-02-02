@@ -15,7 +15,7 @@
 
 		<portfolio-post-grid></portfolio-post-grid>
 
-		<arrow-down element="contact" color="#E27D60">Contact</arrow-down>
+		<arrow-down element="contact" color="#e6382b">Contact</arrow-down>
 	</section>
 </template>
 

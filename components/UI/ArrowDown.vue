@@ -25,8 +25,6 @@
 	}
 </script>
 <style scoped lang='scss'>
-	@import '~assets/styles/_base.scss';
-
 	.dv-ui__arrow-down {
 		position: absolute;
 		bottom: 20px;
@@ -52,7 +50,6 @@
 
 		&--arrow {
 			border-radius: 50%;
-			color: $black;
 			height: 30px;
 			width: 30px;
 			display: flex;

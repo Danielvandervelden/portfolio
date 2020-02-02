@@ -84,13 +84,6 @@ module.exports = {
 		id: "UA-147622979-2"
 	}]
   ],
-  /*
-  ** Axios module configuration
-  */
-  axios: {
-	baseURL: "https://portfolio-57413.firebaseio.com/",
-	withCredentials: false
-  },
 
   /*
   ** Build configuration
@@ -102,7 +95,7 @@ module.exports = {
     extend(config, ctx) {
       
 	},
-	crossorigin: 'anonymous'
+	crossorigin: 'crossorigin'
   },
 
   pageTransition: {

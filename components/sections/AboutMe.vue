@@ -28,7 +28,7 @@
 				<skill-slider></skill-slider>
 			</div>
 		</div>
-		<arrow-down element="portfolio" color="#E27D60">Portfolio</arrow-down>
+		<arrow-down element="portfolio" color="#e6382b">Portfolio</arrow-down>
 	</section>
 </template>
 

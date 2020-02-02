@@ -1,6 +1,6 @@
 <template>
 	<div :id="`${id.toLowerCase().replace(/[^A-Z0-9]/ig, '_')}-popup`" class="portfolio-popup__wrapper">
-		<a href="#" @click.prevent="closePopupWindow" class="portfolio-popup__close"><font-awesome-icon :icon="['fas', 'times']" /></a>
+		<a :title="`close-${id.toLowerCase().replace(/[^A-Z0-9]/ig, '_')}`" href="#" @click.prevent="closePopupWindow" class="portfolio-popup__close"><font-awesome-icon :icon="['fas', 'times']" /></a>
 		<div class="portfolio-popup">
 			<div class="image-wrapper">
 				<img :src="background" :alt="id">
