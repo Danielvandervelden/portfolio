@@ -10,7 +10,7 @@ module.exports = {
         return ['script', 'style', 'font'].includes(type)
       }
     }
-  }
+  },
 
   /*
   ** Headers of the page
