@@ -4,6 +4,14 @@ const pkg = require('./package')
 module.exports = {
   mode: 'universal',
 
+  render: {
+    bundleRenderer: {
+      shouldPreload: (file, type) => {
+        return ['script', 'style', 'font'].includes(type)
+      }
+    }
+  }
+
   /*
   ** Headers of the page
   */
@@ -23,9 +31,9 @@ module.exports = {
     ],
     link: [
 	  { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-	  { rel: "stylesheet", type: "text/css", href: "https://fonts.googleapis.com/css?family=Hind+Siliguri:300,700", defer: true },
-	  { rel: "stylesheet", type: "text/css", href: "https://fonts.googleapis.com/css?family=Work+Sans:300,900", defer: true },
-	  { rel: "stylesheet", type: "text/css", href: "https://use.fontawesome.com/releases/v5.7.1/css/all.css", defer: true },
+	  { rel: "stylesheet", type: "text/css", href: "https://fonts.googleapis.com/css?family=Hind+Siliguri:300,700display=swap", defer: true },
+	  { rel: "stylesheet", type: "text/css", href: "https://fonts.googleapis.com/css?family=Work+Sans:300,900display=swap", defer: true },
+	  { rel: "stylesheet", type: "text/css", href: "https://use.fontawesome.com/releases/v5.7.1/css/all.cssdisplay=swap", defer: true },
     ]
   },
 
@@ -60,8 +68,13 @@ module.exports = {
 	'@nuxtjs/sitemap',
 	['@nuxtjs/robots', {
 		
-	}]
+	}],
+	'@bazzite/nuxt-optimized-images'
   ],
+
+  optimizedImages: {
+    optimizeImages: true
+  }
 
   buildModules: [
 	["@nuxtjs/google-analytics", {

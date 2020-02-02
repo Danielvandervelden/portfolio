@@ -11,21 +11,23 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.9.0",
-    "@nuxtjs/pwa": "^2.6.0",
+    "@bazzite/nuxt-optimized-images": "^0.3.0",
+    "@nuxtjs/axios": "^5.9.4",
+    "@nuxtjs/pwa": "^3.0.0-beta.19",
     "@nuxtjs/robots": "^2.4.2",
     "@nuxtjs/sitemap": "^2.0.1",
-    "cross-env": "^6.0.3",
+    "cross-env": "^7.0.0",
     "express": "^4.17.1",
+    "imagemin-pngquant": "^8.0.0",
     "lodash": "^4.17.15",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "nuxt": "^2.11.0",
-    "nuxt-lazy-load": "^1.0.5",
-    "sass-loader": "^8.0.0",
+    "nuxt-lazy-load": "^1.0.7",
+    "sass-loader": "^8.0.2",
     "smoothscroll-polyfill": "^0.4.4"
   },
   "devDependencies": {
-    "@nuxtjs/google-analytics": "^2.2.2",
+    "@nuxtjs/google-analytics": "^2.2.3",
     "nodemon": "^2.0.2"
   }
 }
