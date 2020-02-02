@@ -10,7 +10,7 @@ module.exports = {
   			return ['script', 'style', 'font'].includes(type)
   		}
   	}
-  }
+  },
 
   /*
   ** Headers of the page
@@ -36,7 +36,14 @@ module.exports = {
 
   webfontloader: {
     google: {
-      families: ['Hind+Siliguri:300,700&display=swap', 'Work+Sans:300,900&display=swap'] //Loads Lato font with weights 400 and 700
+      families: [
+		  'Work+Sans:300,400,700',
+		  'Hind+Siliguri:300,700'
+		],
+		urls: [
+			'https://fonts.googleapis.com/css?family=Work+Sans:300,400,700&display=swap',
+			'https://fonts.googleapis.com/css?family=Hind+Siliguri:300,700&display=swap'
+		]
     }
   },
 
@@ -68,6 +75,7 @@ module.exports = {
     '@nuxtjs/axios',
 	'@nuxtjs/pwa',
 	'nuxt-lazy-load',
+	'nuxt-webfontloader',
 	'@nuxtjs/sitemap',
 	'@nuxtjs/robots',
 	'@bazzite/nuxt-optimized-images',
