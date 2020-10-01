@@ -66,10 +66,8 @@
 
 		&__container {
 			position: relative;
-			top: 30%;
-			transform: translateY(-50%);
+			top: 15vh;
 			text-align: center;
-			margin-bottom: 5rem;
 		}
 
 		// All parallax letters need position relative
@@ -110,7 +108,7 @@
 		&__ocupation {
 			text-align: center;
 			position: relative;
-			top: 20vw;
+			top: 20vh;
 
 			span {
 				letter-spacing: 1rem;
