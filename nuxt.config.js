@@ -78,7 +78,7 @@ module.exports = {
 	'nuxt-webfontloader',
 	'@nuxtjs/sitemap',
 	'@nuxtjs/robots',
-	'@bazzite/nuxt-optimized-images',
+	"@aceforth/nuxt-optimized-images",
 	[
 		'nuxt-fontawesome', {
 			imports: [

@@ -110,7 +110,7 @@
 		&__ocupation {
 			text-align: center;
 			position: relative;
-			top: 20%;
+			top: 23%;
 
 			span {
 				letter-spacing: 1rem;
