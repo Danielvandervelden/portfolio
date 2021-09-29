@@ -26,26 +26,31 @@ export const state = () => ({
 			background: require(`@/assets/images/portfolioimages/nmsdatabase.png`)
 		},
 		{
-			name: 'Car Insurance Application',
+			name: 'Distridata',
 			id: new Date() * Math.random() + Math.random(),
-			tech: ['Vue.js', 'Vuex', 'Vuei18n', 'Vuelidate', 'Axios', 'Webpack', 'SCSS'],
+			tech: ['Nuxt.js', 'Vuex', 'Axios', 'Webpack', 'SCSS'],
+			website: 'https://www.distridata.nl',
 			content: `<p>
-				This was a very big Car Insurance Application that I had to build for a client. The application itself is not live yet, but as soon as it
-				is I will link it here.
+				This PWA was built using Wordpress as headless CMS (it was completely revamped backend wise) and using Nuxt.js as a frontend.
 				</p>
 			
 			<p>
-				This application is built in purely Vue.JS and utilizes many different packages such as Vuei18n, Axios and VeeValidate. It was built with the
-				intention of being some sort of template for them to continue to build upon. There are many different types of insurance such as
-				car, home and scooter. The entire configuration had to be setup as globally as possible so that further extension of the project was easy.
-			</p>
-			
-			<p>
-				In order to make this application as good as possible I decided to split the entire design up into components and layouts before building. The folder structure
-				for a project this big was very important so that it wouldn't get messy later on. Everything is split up neatly into configuration files for packages (i.e. VeeValidate, Axios & Vuei18n), different component folders such as UI elements (buttons, input fields, select boxes) and layouts
-				for an easy configuration of for example sidebars.
+				The Wordpress backend makes a page builder called "DIVI" available, with which the user can build up their page using custom components that we've built. These pages can be queried
+				from the Frontend through an API. The entire page is sent back as a JSON object and parsed on the Frontend to render all of our components.
 			</p>`,
-			background: require(`@/assets/images/portfolioimages/car-insurance-app.png`)
+			background: require(`@/assets/images/portfolioimages/distridata.png`)
+		},
+		{
+			name: 'Orangevalley',
+			id: new Date() * Math.random() + Math.random(),
+			tech: ['Nuxt.js', 'Vuex', 'Axios', 'Webpack', 'SCSS', 'Hubspot'],
+			website: 'https://www.orangevalley.nl',
+			content: `<p>
+			Another Nuxt.js PWA we built using our Wordpress/Nuxt.js setup. The client can easily build their entire website using the page builder, and we make sure
+			all of the components are rendered on the page correctly.
+			</p>
+			<p>An interesting integration with Hubspot made this project quite interesting.</p>`,
+			background: require(`@/assets/images/portfolioimages/orangevalley.png`)
 		},
 		{
 			name: 'Saarbakt',
@@ -58,19 +63,6 @@ export const state = () => ({
 			<p>Throughout the years I've rewritten it about 2 or 3 times and every single time I think to myself: "what was I doing?". The most recent rewrite includes a ridiculous amount of updates
 			under which: lazy loading images, a complete webpack configuration, better image scaling/optimalisation and SEO updates.</p>`,
 			background: require(`@/assets/images/portfolioimages/saarbakt.png`)
-		},
-		{
-			name: 'Magento 2 Webshop',
-			id: new Date() * Math.random() + Math.random(),
-			tech: ['Magento2', 'Grunt', 'PHP', 'LESS'],
-			website: 'https://www.eki.nl',
-			content: `<p>One of the Magento 2 webshops I am particularly proud of. Built with, obviously, Magento 2. It uses
-			the core Front End technologies that are shipped with Magento 2 such as Less, RequireJS and Grunt.</p>
-			
-			<p>All the "blocks" you see throughout the webshop are widgets which we developed and implemented through
-			a widget library. These are all configurable through the backend for easy creation of CMS pages and also 
-			product pages.</p>`,
-			background: require(`@/assets/images/portfolioimages/eki.png`)
 		},
 	]
 })

@@ -155,7 +155,7 @@
 	@media screen and (max-width: 1024px) {
 		.dv-parallax-name {
 			&__ocupation {
-				top: 25%;
+				top: 15%;
 			}
 		}
 	}
@@ -180,7 +180,7 @@
 			}
 
 			&__ocupation {
-				top: 55px;
+				top: 15%;
 			}
 		}
 	}
