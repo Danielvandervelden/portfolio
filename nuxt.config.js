@@ -76,7 +76,6 @@ module.exports = {
 	'@nuxtjs/pwa',
 	'nuxt-lazy-load',
 	'nuxt-webfontloader',
-	'@nuxtjs/sitemap',
 	'@nuxtjs/robots',
 	"@aceforth/nuxt-optimized-images",
 	[
