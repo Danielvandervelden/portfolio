@@ -1,0 +1,93 @@
+@import "../util/variables";
+@import "../util/animations";
+
+main {
+    perspective: 2px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+section {
+    transform-style: preserve-3d;
+    height: 100vh;
+}
+
+#intro {
+    position: relative;
+
+    &:after {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform: translateZ(-1px) scale(1.5);
+        z-index: -1;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+            url("/images/placeholder.jpg");
+    }
+
+    #rotator {
+        background-color: $bittersweet;
+        transform-origin: bottom right;
+        height: 100vh;
+        position: absolute;
+        right: 0;
+        top: -100vh;
+    }
+
+    .tagline {
+        position: relative;
+        font-size: max(4vw, 20px);
+        display: flex;
+        flex-direction: column;
+        max-width: 50vw;
+        padding-left: 5vw;
+        padding-top: 10vh;
+
+        .name span {
+            animation-fill-mode: forwards;
+            opacity: 0;
+            display: inline-block;
+            vertical-align: top;
+            animation-duration: 0.25s;
+            animation-timing-function: ease-in;
+
+            &:nth-child(odd) {
+                animation-name: fromTop;
+                transform: translateY(-20px);
+            }
+
+            &:nth-child(even) {
+                animation-name: fromBottom;
+                transform: translateY(20px);
+            }
+        }
+
+        .frontend {
+          display: inline-block;
+          vertical-align: top;
+          animation-delay: 1s;
+          transform: translateX(-2000px);
+        }
+
+        .developer {
+          display: inline-block;
+          vertical-align: top;
+          animation-delay: 1.3s;
+          transform: translateX(2000px);
+        }
+    }
+
+    @for $i from 1 to 19 {
+        .name span:nth-child(#{$i}) {
+            animation-delay: $i * 0.05s;
+        }
+    }
+}
+
+#portfolio {
+    background-color: $beau-blue;
+}

@@ -1,0 +1,40 @@
+@mixin button($variant) {
+    background-color: transparent;
+    border: 2px inset transparent;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: $font;
+    color: $prussian-blue;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    display: inline-flex;
+    border-radius: 1.25rem;
+    transition: all .2s ease-in-out;
+
+    @if $variant == 'primary' {
+      background-color: $arctic-lime;
+
+      &:hover {
+        background-color: darken($arctic-lime, 25%);
+      }
+    }
+
+    @if $variant == 'secondary' {
+      background-color: $beau-blue;
+
+      &:hover {
+        background-color: darken($beau-blue, 15%);
+      }
+    }
+
+    @if $variant == 'tertiary' {
+      color: $white;
+      background-color: $prussian-blue;
+
+      &:hover {
+        background-color: $white;
+        color: $prussian-blue;
+        border-color: $prussian-blue;
+      }
+    }
+}
