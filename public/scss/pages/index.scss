@@ -15,10 +15,12 @@ section {
 
 #intro {
     position: relative;
+    margin-bottom: 100px;
 
     &:after {
         content: " ";
         position: absolute;
+        height: 120vh;
         top: 0;
         left: 0;
         right: 0;
@@ -27,6 +29,7 @@ section {
         z-index: -1;
         background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
             url("/images/placeholder.jpg");
+        background-size: cover;
     }
 
     #rotator {
@@ -38,12 +41,20 @@ section {
         top: -100vh;
     }
 
+    #wave {
+        position: absolute;
+        top: 99.9%;
+        left: 50%;
+        width: 120%;
+        transform: translateX(-50%) rotate(180deg);
+    }
+
     .tagline {
         position: relative;
-        font-size: max(4vw, 20px);
+        font-size: min(6vw, 80px);
         display: flex;
         flex-direction: column;
-        max-width: 50vw;
+        max-width: 66vw;
         padding-left: 5vw;
         padding-top: 10vh;
 
@@ -54,6 +65,7 @@ section {
             vertical-align: top;
             animation-duration: 0.25s;
             animation-timing-function: ease-in;
+            color: $prussian-blue;
 
             &:nth-child(odd) {
                 animation-name: fromTop;
@@ -67,17 +79,19 @@ section {
         }
 
         .frontend {
-          display: inline-block;
-          vertical-align: top;
-          animation-delay: 1s;
-          transform: translateX(-2000px);
+            display: inline-block;
+            vertical-align: top;
+            animation-delay: 1s;
+            transform: translateX(-2000px);
+            color: $arctic-lime;
         }
 
         .developer {
-          display: inline-block;
-          vertical-align: top;
-          animation-delay: 1.3s;
-          transform: translateX(2000px);
+            display: inline-block;
+            vertical-align: top;
+            animation-delay: 1.3s;
+            transform: translateX(2000px);
+            color: $beau-blue;
         }
     }
 
@@ -90,4 +104,11 @@ section {
 
 #portfolio {
     background-color: $beau-blue;
+    position: relative;
+
+    #wave2 {
+      position: absolute;
+      bottom: 99.9%;
+      left: 0;
+    }
 }
