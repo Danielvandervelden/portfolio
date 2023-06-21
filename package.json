@@ -25,7 +25,7 @@
 		"imagemin-pngquant": "^9.0.1",
 		"lodash": "^4.17.20",
 		"node-sass": "^4.14.1",
-		"nuxt": "^2.14.6",
+		"nuxt": "^3.4.3",
 		"nuxt-fontawesome": "^0.4.0",
 		"nuxt-lazy-load": "^1.2.4",
 		"nuxt-webfontloader": "^1.1.0",
